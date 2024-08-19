@@ -1,0 +1,2 @@
+import{e as t,u as a,b as o}from"../../../runtime.mjs";import{r as s}from"../../../_/auth.mjs";const e=t((async t=>{await s(t);if(!a().hub.openapi)throw o({statusCode:422,message:"OpenAPI not configured"});const e=await import("../../../runtime2.mjs").then((t=>t.default)).catch((()=>{}));if("function"!=typeof e)throw o({statusCode:404,message:"not found"});return e(t)}));export{e as default};
+//# sourceMappingURL=openapi.get.mjs.map

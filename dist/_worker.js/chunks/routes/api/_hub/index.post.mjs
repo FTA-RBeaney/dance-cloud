@@ -1,0 +1,2 @@
+import{e as m,a as s,d as e,m as r}from"../../../runtime.mjs";import{h as t}from"../../../_/blob.mjs";import{r as o}from"../../../_/auth.mjs";import"../../../virtual/_commonjsHelpers.mjs";import"../../../_/index.mjs";import"../../../_/pathe.ff20891b.mjs";const a=m((async m=>{await o(m),s("blob");const a=e(m);return t().handleUpload(m,{formKey:a.formKey||"files",multiple:"false"!==a.multiple,put:r(a.put),ensure:r(a.ensure)})}));export{a as default};
+//# sourceMappingURL=index.post.mjs.map

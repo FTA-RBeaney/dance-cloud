@@ -1,0 +1,1 @@
+{"version":3,"file":"index.get2.mjs","sources":["../../../../../server/api/messages/index.get.ts"],"sourcesContent":null,"names":["index_get","eventHandler","async","db","hubDatabase","exec","results","prepare","all"],"mappings":"+EAAA,MAAAA,EAAAC,GAAAC,UACA,MAAAC,EAAAC,UAGAD,EAAAE,KAAA,+FAEA,MAAAC,QAAAA,SAAAH,EAAAI,QAAA,mDAAAC,MAEA,OAAAF,CAAA"}

@@ -1,0 +1,2 @@
+import{e as m,a,g as t}from"../../../../runtime.mjs";import{z as r}from"../../../../_/index.mjs";import{h as s}from"../../../../_/blob.mjs";import{r as o}from"../../../../_/auth.mjs";import"../../../../virtual/_commonjsHelpers.mjs";import"../../../../_/pathe.ff20891b.mjs";const e=m((async m=>{await o(m),a("blob");const{pathname:e}=await t(m,r.object({pathname:r.string().min(1)}).parse);return s().serve(m,e)}));export{e as default};
+//# sourceMappingURL=_...pathname_.get.mjs.map
