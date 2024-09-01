@@ -66,12 +66,4 @@ import { House, BookOpenText, Mail, Rss, Award } from "lucide-vue-next";
   flex-wrap: wrap;
   align-items: stretch;
 }
-.menu li > *:not(ul):not(.menu-title):not(details):active,
-.menu li > *:not(ul):not(.menu-title):not(details).active,
-.menu li > details > summary:active {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
-  --tw-text-opacity: 1;
-  color: var(--fallback-nc, oklch(var(--nc) / var(--tw-text-opacity)));
-}
 </style>
