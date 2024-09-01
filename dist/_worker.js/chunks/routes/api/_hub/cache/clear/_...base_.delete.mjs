@@ -1,2 +1,0 @@
-import{e as a,a as s,n as t,b as e,q as o,s as i}from"../../../../../runtime.mjs";import{r}from"../../../../../_/auth.mjs";const m=a((async a=>{await r(a),s("cache");const m=t(a,"base")||"";if(/\.[a-z0-9]+$/i.test(m))throw e({statusCode:400,message:"Invalid base"});const n=o(`cache:nitro:${m}`),c=await n.getKeys();do{const a=c.splice(0,25);await Promise.all(a.map(n.removeItem))}while(c.length);return i(a)}));export{m as default};
-//# sourceMappingURL=_...base_.delete.mjs.map

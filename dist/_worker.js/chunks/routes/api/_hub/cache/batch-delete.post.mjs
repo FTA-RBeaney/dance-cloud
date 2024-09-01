@@ -1,2 +1,0 @@
-import{e as a,a as s,k as e,q as t,s as r}from"../../../../runtime.mjs";import{z as m}from"../../../../_/index.mjs";import{r as i}from"../../../../_/auth.mjs";const o=a((async a=>{await i(a),s("cache");const{keys:o}=await e(a,m.object({keys:m.array(m.string().min(1)).min(1)}).parse),n=t("cache:nitro");do{const a=o.splice(0,25);await Promise.all(a.map((a=>n.removeItem(a))))}while(o.length);return r(a)}));export{o as default};
-//# sourceMappingURL=batch-delete.post.mjs.map

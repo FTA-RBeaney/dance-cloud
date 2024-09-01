@@ -1,1 +1,0 @@
-{"version":3,"file":"index.get3.mjs","sources":["../../../../../server/api/redirects/index.get.ts"],"sourcesContent":null,"names":["index_get","eventHandler","async","hubKV","get"],"mappings":"6CAAA,MAAAA,EAAAC,GAAAC,eACAC,IAAAC,IAAA,cAAA,CAAA"}

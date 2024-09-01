@@ -1,1 +1,0 @@
-export { default } from "file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@nuxt+vite-builder@3.12.4_@types+node@20.14.9_eslint@9.9.0_jiti@1.21.6__magicast@0.3.4_option_2vn76mnkvzo24y3vpo2aieya6m/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"

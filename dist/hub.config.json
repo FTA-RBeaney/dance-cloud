@@ -1,8 +1,0 @@
-{
-  "ai": false,
-  "analytics": false,
-  "blob": true,
-  "cache": true,
-  "database": true,
-  "kv": true
-}

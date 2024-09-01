@@ -19,7 +19,7 @@
     "@primevue/themes": "^4.0.4",
     "lucide-vue-next": "^0.428.0",
     "nuxi": "3.12.0",
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.13.0",
     "primevue": "^4.0.4",
     "tailwindcss-primeui": "^0.3.4"
   },
