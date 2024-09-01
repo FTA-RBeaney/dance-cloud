@@ -1,0 +1,4 @@
+declare module '#content/server' {
+  const serverQueryContent: typeof import('/Users/robertbeaney/Web Sites/dance-cloud/node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/legacy/types').serverQueryContent
+  const parseContent: typeof import('/Users/robertbeaney/Web Sites/dance-cloud/node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server').parseContent
+}

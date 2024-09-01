@@ -1,0 +1,75 @@
+{
+  "title": "Slides",
+  "description": "11 Videos. We go over a wide range of Jazz Slides mainly inspired by Jimmy Slyde. Includes Flash Slide, Shuffle Slide, Backslide, Matchstick, Kickslide, 180°, Forward Slide...",
+  "image": "https://mariborswingfestival.com/wp-content/uploads/2020/01/alex_1-min-1024x769.jpg",
+  "instructor": "Alexandre McCormack",
+  "slug": "slides",
+
+  "sections": [
+    {
+      "title": "Flash slides",
+      "lessons": [
+        {
+          "title": "Side shuffle slide",
+          "slug": "side-shuffle-slide",
+          "videoId": "907828277"
+        },
+        {
+          "title": "Flash slide",
+          "slug": "flash-slide",
+          "videoId": "907817133"
+        }
+      ]
+    },
+    {
+      "title": "Moving slides",
+      "lessons": [
+        {
+          "title": "Push slide",
+          "slug": "push-slide",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Matchstick",
+          "slug": "matchstick",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Combo 1",
+          "slug": "combo-1",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Turn Slide / 180°",
+          "slug": "turn-slide",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Combo 2",
+          "slug": "combo-2",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Knee & Kick Slide",
+          "slug": "knee-kick-slide",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Combo 3",
+          "slug": "combo-3",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Forward & Back Slide",
+          "slug": "forward-back-slide",
+          "videoId": "907817133"
+        },
+        {
+          "title": "Combo 4",
+          "slug": "combo-4",
+          "videoId": "907817133"
+        }
+      ]
+    }
+  ]
+}

@@ -28,6 +28,7 @@ declare module 'nitropack' {
     }
     '/api/_hub': {
       'head': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.3_ioredis@5.4.1_magicast@0.3.4_rollup@4.18.0_vite@5.3.5_@types+node@20.14.9_terser@5.31.1_/node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/index.head').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.3_ioredis@5.4.1_magicast@0.3.4_rollup@4.18.0_vite@5.3.5_@types+node@20.14.9_terser@5.31.1_/node_modules/@nuxthub/core/dist/runtime/cors.dev').default>>>>
     }
     '/api/_hub/manifest': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.3_ioredis@5.4.1_magicast@0.3.4_rollup@4.18.0_vite@5.3.5_@types+node@20.14.9_terser@5.31.1_/node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/manifest.get').default>>>>
@@ -87,6 +88,36 @@ declare module 'nitropack' {
     }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nuxt@3.12.4_@opentelemetry+api@1.9.0_@parcel+watcher@2.4.1_@types+node@20.14.9_encoding@0.1.1_cu6mymf3lhirgq43i47sptbq2u/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
+    }
+    '/api/_content/query/:qid/**:params': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
+    }
+    '/api/_content/query/:qid': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
+    }
+    '/api/_content/query': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
+    }
+    '/api/_content/cache.json': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>>>
+    }
+    '/api/_content/navigation/:qid/**:params': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
+    }
+    '/api/_content/navigation/:qid': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
+    }
+    '/api/_content/navigation': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.4_nuxt@3.12.4_@opentelemetry+api@1.9.0_@parce_gxy5rjqlbb7wieryrmuun4t2gq/node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
+    }
+    '/_nitro/openapi.json': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nitropack@2.9.7_@opentelemetry+api@1.9.0_encoding@0.1.13_magicast@0.3.4/node_modules/nitropack/dist/runtime/routes/openapi').default>>>>
+    }
+    '/_nitro/scalar': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nitropack@2.9.7_@opentelemetry+api@1.9.0_encoding@0.1.13_magicast@0.3.4/node_modules/nitropack/dist/runtime/routes/scalar').default>>>>
+    }
+    '/_nitro/swagger': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nitropack@2.9.7_@opentelemetry+api@1.9.0_encoding@0.1.13_magicast@0.3.4/node_modules/nitropack/dist/runtime/routes/swagger').default>>>>
     }
   }
 }

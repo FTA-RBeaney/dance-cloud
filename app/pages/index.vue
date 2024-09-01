@@ -1,7 +1,8 @@
 <template>
   <main>
-    <ImageGallery />
+    <ClassTable />
+    <!-- <ImageGallery />
     <RedirectsPanel />
-    <MessagesPanel />
+    <MessagesPanel /> -->
   </main>
 </template>

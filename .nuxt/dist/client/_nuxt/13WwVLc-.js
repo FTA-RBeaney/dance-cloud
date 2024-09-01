@@ -1,0 +1,1 @@
+import{_ as t}from"./DlAUqK2U.js";import{x as o,a9 as a,v as r}from"./C3K26ZoG.js";const c={},s={class:"container mx-auto px-2 min-h-[calc(100vh-138px)] relative pb-14"};function n(e,l){return r(),o("div",s,[a(e.$slots,"default")])}const i=t(c,[["render",n]]);export{i as default};
