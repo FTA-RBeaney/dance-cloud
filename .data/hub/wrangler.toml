@@ -1,0 +1,12 @@
+[[r2_buckets]]
+binding = "BLOB"
+bucket_name = "default"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "kv_default"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "default"
+database_id = "default"
