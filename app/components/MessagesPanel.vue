@@ -4,6 +4,7 @@ const { data: messages, refresh } = await useFetch("/api/messages");
 const newMessage = ref("");
 
 async function sendMessage() {
+  alert("hi");
   if (!newMessage.value.trim()) return;
   await $fetch("/api/messages", {
     method: "POST",
@@ -14,11 +15,13 @@ async function sendMessage() {
   newMessage.value = "";
   await refresh();
 }
+
+console.log(messages);
 </script>
 
 <template>
   <div>
-    <div class="card mb-4 max-w-md">
+    <div class="card !block mb-4 max-w-md">
       <!-- component -->
       <div class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-[725px]">
         <div
@@ -47,7 +50,7 @@ async function sendMessage() {
             </div>
           </div>
           <div class="flex items-center space-x-2">
-            <button
+            <!-- <button
               type="button"
               class="inline-flex items-center justify-center h-10 w-10 transition duration-500 ease-in-out text-gray-400 hover:text-gray-500 focus:outline-none"
             >
@@ -64,7 +67,7 @@ async function sendMessage() {
               class="inline-flex items-center justify-center h-10 w-10 transition duration-500 ease-in-out text-gray-400 hover:text-gray-500 focus:outline-none"
             >
               <i class="fas fa-video"></i>
-            </button>
+            </button> -->
             <button
               type="button"
               class="inline-flex items-center justify-center h-10 w-10 transition duration-500 ease-in-out text-gray-400 hover:text-gray-500 focus:outline-none"
@@ -178,33 +181,15 @@ async function sendMessage() {
           <div class="relative flex">
             <form @submit.prevent="sendMessage" class="w-full">
               <span class="absolute inset-y-0 flex items-center"> </span>
-              <Input
-                type="text"
+              <input
                 v-model="newMessage"
+                type="text"
                 placeholder="Write your message!"
                 class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-400 pl-12 bg-gray-50 dark:bg-slate-700 rounded-md py-2 border border-gray-200 dark:border-slate-800"
               />
               <div
                 class="absolute right-0 items-center inset-y-0 hidden sm:flex"
               >
-                <button
-                  type="button"
-                  class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-400 hover:text-gray-500 focus:outline-none"
-                >
-                  <i class="fas fa-paperclip"></i>
-                </button>
-                <button
-                  type="button"
-                  class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-400 hover:text-gray-500 focus:outline-none"
-                >
-                  <i class="fas fa-camera"></i>
-                </button>
-                <button
-                  type="button"
-                  class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-400 hover:text-gray-500 focus:outline-none"
-                >
-                  <i class="fas fa-face-smile"></i>
-                </button>
                 <button
                   type="submit"
                   class="inline-flex items-center justify-center rounded-md px-4 py-3 transition duration-500 ease-in-out text-white bg-blue-500 hover:bg-blue-400 focus:outline-none"

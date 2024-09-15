@@ -44,10 +44,11 @@ const route = useRoute();
   </div>
 </template>
 
-<style scoped>
-.breadcrumb-item:after {
+<style>
+body .breadcrumb-item + .breadcrumb-item::before {
   padding-left: 0.5rem;
   content: ">";
+  color: white;
 }
 .breadcrumb-item:last-child:after {
   content: none;

@@ -1,10 +1,10 @@
 {
   "title": "Rhythm Steps 1 & Shim Sham",
   "description": "13 Videos. Build your knowledge in basic rhythm steps such as Timesteps, half breaks, breaks... Learn the soft shoe Shim Sham, close to its original version by Leonard Reed & Willie Bryant.",
-  "image": "https://static.wixstatic.com/media/a9cbc1_2640cc76f349499bbdf72620a942a010~mv2.jpg/v1/fit/w_800,h_600,al_c,q_90/file.webp",
+  "image": "https://res.cloudinary.com/dgbn0ttzf/image/upload/v1725413341/tap_dancing_header_1_b85xgx.jpg",
   "instructor": "Alexandre McCormack",
   "slug": "rhythm-steps",
-
+  "tag": "foundation",
   "sections": [
     {
       "title": "Rhythm Steps Foundation",

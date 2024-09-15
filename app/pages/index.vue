@@ -1,8 +1,8 @@
 <template>
   <main>
-    <ClassTable />
+    <!-- <ClassTable /> -->
     <!-- <ImageGallery />
-    <RedirectsPanel />
-    <MessagesPanel /> -->
+    <RedirectsPanel /> -->
+    <MessagesPanel />
   </main>
 </template>

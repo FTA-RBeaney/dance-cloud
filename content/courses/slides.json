@@ -1,10 +1,10 @@
 {
   "title": "Slides",
   "description": "11 Videos. We go over a wide range of Jazz Slides mainly inspired by Jimmy Slyde. Includes Flash Slide, Shuffle Slide, Backslide, Matchstick, Kickslide, 180°, Forward Slide...",
-  "image": "https://mariborswingfestival.com/wp-content/uploads/2020/01/alex_1-min-1024x769.jpg",
+  "image": "https://res.cloudinary.com/dgbn0ttzf/image/upload/v1725323981/alex_1-min-1024x769_1_tle9fd.jpg",
   "instructor": "Alexandre McCormack",
   "slug": "slides",
-
+  "tag": "wisdom",
   "sections": [
     {
       "title": "Flash slides",

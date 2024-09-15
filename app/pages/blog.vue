@@ -5,17 +5,16 @@ Install the "flowbite-typography" NPM package to apply styles and format the art
 URL: https://flowbite.com/docs/components/typography/ 
 -->
   <div>
-    <Hero
-      title="Blog"
-      image="https://i.ytimg.com/vi/DxGl_GAP1lM/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gQCgcMA8=&rs=AOn4CLB6ZyP10880JIsMlnR0cSutHhIG6g"
-      class="bg-center"
+    <CourseHeader
+      title="blog"
+      image="https://res.cloudinary.com/dgbn0ttzf/image/upload/v1725362678/alex_hero_cover-min-1024x468_1_p3f8mt.jpg"
     />
     <main
       class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased"
     >
       <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
         <article
-          class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
+          class="mx-auto w-full max-w-4xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
         >
           <header class="mb-4 lg:mb-6 not-format">
             <address class="flex items-center mb-6 not-italic">
