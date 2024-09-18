@@ -3,6 +3,9 @@ import type { Serialize, Simplify } from 'nitropack'
 declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/auth/**': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/auth/[...]').default>>>>
+    }
     '/api/cached': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/cached.get').default>>>>
     }
@@ -34,6 +37,15 @@ declare module 'nitropack' {
     '/api/redirects': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/redirects/index.get').default>>>>
       'put': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/redirects/index.put').default>>>>
+    }
+    '/api/stripe/create-checkout-session': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/stripe/create-checkout-session').default>>>>
+    }
+    '/api/stripe/create-portal-session': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/stripe/create-portal-session').default>>>>
+    }
+    '/api/stripe/webhook': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/stripe/webhook').default>>>>
     }
     '/api/_hub/**:feature': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/[...feature]').default>>>>

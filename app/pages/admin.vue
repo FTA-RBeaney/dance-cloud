@@ -1,5 +1,10 @@
+<script setup>
+const auth = useAuth();
+</script>
+
 <template>
   <div class="container-xxl">
+    <pre>{{ auth }}</pre>
     <main id="profile-form">
       <div
         class="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900"

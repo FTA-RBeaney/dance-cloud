@@ -1,216 +1,120 @@
+<script setup lang="ts">
+const { status, signIn, data } = useAuth();
+const { checkout, navigateToStripeDashboard, tiers } = useStripe();
+
+const handleBuyNow = async (lookupKey: string) => {
+  if (data.value?.user?.isSubscribed) {
+    await navigateToStripeDashboard();
+  } else if (status.value === 'authenticated') {
+    await checkout(lookupKey);
+  } else {
+    signIn('github');
+  }
+};
+
+const buttonText = computed(() => {
+  if (data.value?.user?.isSubscribed) {
+    return 'Manage Subscription';
+  } else if (status.value === 'authenticated') {
+    return 'Buy Now';
+  } else {
+    return 'Sign In to Buy';
+  }
+});
+</script>
+
 <template>
-  <div class="w-full">
-    <CourseHeader
-      title="Plans"
-      image="https://res.cloudinary.com/dgbn0ttzf/image/upload/v1725362678/alex_hero_cover-min-1024x468_1_p3f8mt.jpg"
-    />
-    <section class="bg-white dark:bg-gray-900">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2
-            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-          >
-            Plans
-          </h2>
-          <p
-            class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400"
-          >
-            Choose a plan below to suit your needs
-          </p>
-        </div>
-        <div
-          class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0 max-w-screen-lg mx-auto"
+  <div class="bg-white py-10">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl text-center">
+        <h2 class="text-base font-semibold leading-7 text-indigo-600">
+          Pricing
+        </h2>
+        <p
+          class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
         >
-          <!-- Pricing Card -->
-          <div
-            class="w-full flex flex-col p-6 mx-auto text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
-          >
-            <h3 class="mb-4 text-2xl font-semibold">Monthly</h3>
-            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-              Recurring subscription every month
-            </p>
-            <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-5xl font-extrabold">€45</span>
-              <span class="text-gray-500 dark:text-gray-400">/month</span>
+          Pricing plans for teams of&nbsp;all&nbsp;sizes
+        </p>
+      </div>
+      <p
+        class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600"
+      >
+        Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi
+        iusto modi velit ut non voluptas in. Explicabo id ut laborum.
+      </p>
+      <div
+        class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+      >
+        <div
+          v-for="(tier, tierIdx) in tiers"
+          :key="tier.id"
+          :class="[
+            tier.mostPopular ? 'lg:z-10 lg:rounded-b-none' : 'lg:mt-8',
+            tierIdx === 0 ? 'lg:rounded-r-none' : '',
+            tierIdx === tiers.length - 1 ? 'lg:rounded-l-none' : '',
+            'flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10',
+          ]"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-x-4">
+              <h3
+                :id="tier.id"
+                :class="[
+                  tier.mostPopular ? 'text-indigo-600' : 'text-gray-900',
+                  'text-lg font-semibold leading-8',
+                ]"
+              >
+                {{ tier.name }}
+              </h3>
+              <p
+                v-if="tier.mostPopular"
+                class="rounded-full bg-indigo-600/10 px-2.5 py-1 text-xs font-semibold leading-5 text-indigo-600"
+              >
+                Most popular
+              </p>
             </div>
-            <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Access to All Courses </span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Access to All Levels</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span> Monthly Group Q&A</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>14 Day Money Back Guarantee</span>
+            <p class="mt-4 text-sm leading-6 text-gray-600">
+              {{ tier.description }}
+            </p>
+            <p class="mt-6 flex items-baseline gap-x-1">
+              <span class="text-4xl font-bold tracking-tight text-gray-900">{{
+                tier.priceMonthly
+              }}</span>
+              <span class="text-sm font-semibold leading-6 text-gray-600"
+                >/month</span
+              >
+            </p>
+            <ul
+              role="list"
+              class="mt-8 space-y-3 text-sm leading-6 text-gray-600"
+            >
+              <li
+                v-for="feature in tier.features"
+                :key="feature"
+                class="flex gap-x-3"
+              >
+                <CheckIcon
+                  class="h-6 w-5 flex-none text-indigo-600"
+                  aria-hidden="true"
+                />
+                {{ feature }}
               </li>
             </ul>
-            <Button href="#">Get started</Button>
           </div>
-          <!-- Pricing Card -->
-          <div
-            class="w-full flex flex-col p-6 mx-auto text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          <button
+            @click="() => handleBuyNow(tier.id)"
+            :aria-describedby="tier.id"
+            :class="[
+              tier.mostPopular
+                ? 'bg-indigo-600 text-white shadow-sm hover:bg-indigo-500'
+                : 'text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300',
+              'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
+            ]"
           >
-            <h3 class="mb-4 text-2xl font-semibold">Yearly</h3>
-            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-              20€/mo | Billed Yearly Valid for one year
-            </p>
-            <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-5xl font-extrabold">€240</span>
-              <!-- <span class="text-gray-500 dark:text-gray-400">/month</span> -->
-            </div>
-            <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Personalised Feedback - Send 2 to 5 minute video </span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Access to All Courses </span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>Access to All Levels</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span> Monthly Group Q&A</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg
-                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span>14 Day Money Back Guarantee</span>
-              </li>
-            </ul>
-            <Button href="#">Get started</Button>
-          </div>
+            {{ buttonText }}
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
-
-<style scoped>
-p {
-  margin-bottom: 1rem;
-}
-
-li {
-  font-size: 1rem;
-}
-</style>

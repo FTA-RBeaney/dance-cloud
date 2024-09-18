@@ -133,6 +133,12 @@
       ],
       "#content/server": [
         "../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/legacy/server"
+      ],
+      "#auth": [
+        "../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/server/services"
+      ],
+      "#auth/*": [
+        "../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/server/services/*"
       ]
     },
     "lib": [
@@ -151,6 +157,7 @@
     "../node_modules/.pnpm/@nuxtjs+mdc@0.8.3_magicast@0.3.5_rollup@4.21.2/node_modules/@nuxtjs/mdc/runtime/server",
     "../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/runtime/server",
     "../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/runtime/server",
+    "../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/runtime/server",
     "../node_modules/.pnpm/@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-embedded@1.77.8_terser@5.31.6_/node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/.pnpm/@nuxt+telemetry@2.5.4_magicast@0.3.5_rollup@4.21.2/node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",

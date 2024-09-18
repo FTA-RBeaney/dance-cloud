@@ -43,6 +43,7 @@ declare global {
   const fromNodeMiddleware: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['fromNodeMiddleware']
   const fromPlainHandler: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['fromPlainHandler']
   const fromWebHandler: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['fromWebHandler']
+  const getAccountsByEmail: typeof import('../../server/utils/queries/getAccountsByEmail')['getAccountsByEmail']
   const getCookie: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['getCookie']
   const getHeader: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['getHeader']
   const getHeaders: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['getHeaders']
@@ -119,6 +120,7 @@ declare global {
   const setResponseHeaders: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['setResponseHeaders']
   const setResponseStatus: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['setResponseStatus']
   const splitCookiesString: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['splitCookiesString']
+  const stripe: typeof import('../../server/utils/stripe')['stripe']
   const toEventHandler: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['toEventHandler']
   const toNodeListener: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['toNodeListener']
   const toPlainHandler: typeof import('../../node_modules/.pnpm/h3@1.12.0/node_modules/h3')['toPlainHandler']
@@ -150,4 +152,6 @@ export { hubHooks, onHubReady } from '../../node_modules/.pnpm/@nuxthub+core@0.7
 export { hubBlob, proxyHubBlob, ensureBlob } from '../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/utils/blob';
 export { hubDatabase, proxyHubDatabase } from '../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/database/server/utils/database';
 export { hubKV, proxyHubKV } from '../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/kv/server/utils/kv';
+export { getAccountsByEmail } from '../../server/utils/queries/getAccountsByEmail';
+export { stripe } from '../../server/utils/stripe';
 export { proxyHubCache } from '../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/utils/cache';

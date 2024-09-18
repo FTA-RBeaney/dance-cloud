@@ -18,6 +18,7 @@ declare global {
   const SegmentOptions: typeof import('../../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/dist/runtime/registry/segment')['SegmentOptions']
   const StripeOptions: typeof import('../../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/dist/runtime/registry/stripe')['StripeOptions']
   const XPixelOptions: typeof import('../../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/dist/runtime/registry/x-pixel')['XPixelOptions']
+  const _refreshHandler: typeof import('../refreshHandler')['_refreshHandler']
   const abortNavigation: typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/router')['abortNavigation']
   const addRouteMiddleware: typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/router')['addRouteMiddleware']
   const callOnce: typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/once')['callOnce']
@@ -120,6 +121,8 @@ declare global {
   const useAppConfig: typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/config')['useAppConfig']
   const useAsyncData: typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']
   const useAttrs: typeof import('../../node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue')['useAttrs']
+  const useAuth: typeof import('../../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/composables/authjs/useAuth')['useAuth']
+  const useAuthState: typeof import('../../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/composables/authjs/useAuthState')['useAuthState']
   const useConfirm: typeof import('../../node_modules/.pnpm/primevue@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/primevue/useconfirm/index')['useConfirm']
   const useContent: typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/composables/utils')['useContentDisabled']
   const useContentHead: typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/composables/head')['useContentHead']
@@ -186,6 +189,7 @@ declare global {
   const useServerSeoMeta: typeof import('../../node_modules/.pnpm/@unhead+vue@1.10.0_vue@3.4.38_typescript@5.5.4_/node_modules/@unhead/vue')['useServerSeoMeta']
   const useSlots: typeof import('../../node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue')['useSlots']
   const useState: typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/state')['useState']
+  const useStripe: typeof import('../../app/composables/useStripe')['useStripe']
   const useStyle: typeof import('../../node_modules/.pnpm/primevue@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/primevue/usestyle/index')['useStyle']
   const useToast: typeof import('../../node_modules/.pnpm/primevue@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/primevue/usetoast/index')['useToast']
   const useTransitionState: typeof import('../../node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue')['useTransitionState']
@@ -230,6 +234,7 @@ declare module 'vue' {
     readonly SegmentOptions: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/dist/runtime/registry/segment')['SegmentOptions']>
     readonly StripeOptions: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/dist/runtime/registry/stripe')['StripeOptions']>
     readonly XPixelOptions: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+scripts@0.7.1_@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-emb_m55h4ibjhp6yyqggpguehdtr5a/node_modules/@nuxt/scripts/dist/runtime/registry/x-pixel')['XPixelOptions']>
+    readonly _refreshHandler: UnwrapRef<typeof import('../refreshHandler')['_refreshHandler']>
     readonly abortNavigation: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/router')['abortNavigation']>
     readonly addRouteMiddleware: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/router')['addRouteMiddleware']>
     readonly callOnce: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/once')['callOnce']>
@@ -332,6 +337,8 @@ declare module 'vue' {
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/config')['useAppConfig']>
     readonly useAsyncData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']>
     readonly useAttrs: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue')['useAttrs']>
+    readonly useAuth: UnwrapRef<typeof import('../../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/composables/authjs/useAuth')['useAuth']>
+    readonly useAuthState: UnwrapRef<typeof import('../../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/composables/authjs/useAuthState')['useAuthState']>
     readonly useConfirm: UnwrapRef<typeof import('../../node_modules/.pnpm/primevue@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/primevue/useconfirm/index')['useConfirm']>
     readonly useContent: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/composables/utils')['useContentDisabled']>
     readonly useContentHead: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/composables/head')['useContentHead']>
@@ -398,6 +405,7 @@ declare module 'vue' {
     readonly useServerSeoMeta: UnwrapRef<typeof import('../../node_modules/.pnpm/@unhead+vue@1.10.0_vue@3.4.38_typescript@5.5.4_/node_modules/@unhead/vue')['useServerSeoMeta']>
     readonly useSlots: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue')['useSlots']>
     readonly useState: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/composables/state')['useState']>
+    readonly useStripe: UnwrapRef<typeof import('../../app/composables/useStripe')['useStripe']>
     readonly useStyle: UnwrapRef<typeof import('../../node_modules/.pnpm/primevue@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/primevue/usestyle/index')['useStyle']>
     readonly useToast: UnwrapRef<typeof import('../../node_modules/.pnpm/primevue@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/primevue/usetoast/index')['useToast']>
     readonly useTransitionState: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue')['useTransitionState']>

@@ -1,9 +1,9 @@
 <script setup>
 const router = useRouter();
-const user = await useRequestURL();
+const user = await useUser();
 
 function goToRegister() {
-  router.push("/register");
+  router.push('/register');
 }
 </script>
 

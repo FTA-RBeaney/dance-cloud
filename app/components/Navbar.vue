@@ -7,7 +7,9 @@ import {
   Gem,
   Rss,
   GraduationCap,
-} from "lucide-vue-next";
+} from 'lucide-vue-next';
+
+const { status, signIn } = useAuth();
 </script>
 
 <template>
@@ -62,12 +64,9 @@ import {
           <!-- Navbar Icons -->
           <ul class="quick-access">
             <li class="rbt-user-wrapper d-none d-xl-block">
-              <NuxtLink to="/admin" class="flex items-center">
-                <Avatar
-                  image="https://lh3.googleusercontent.com/a/ACg8ocJPJG2lKugFYNE_AqUNgxT0fR9SJ0aTd3xtQc4jxizLubbmo-id=s96-c"
-                  class="!rounded-full overflow-hidden mr-4 h-10 w-10"
-                  size="medium"
-              /></NuxtLink>
+              <AuthMenu v-if="status === 'authenticated'" />
+              <button v-else @click="() => signIn('github')">Sign In</button>
+
               <!-- <div class="rbt-user-menu-list-wrapper">
                 <div class="inner">
                   <div class="rbt-admin-profile">

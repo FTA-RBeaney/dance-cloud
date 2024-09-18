@@ -3,16 +3,21 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, sendNoContent, setHeader, assertMethod, readFormData, getValidatedRouterParams, getValidatedQuery, getHeader, getRequestWebStream, readValidatedBody, getQuery as getQuery$1, getCookie, getRequestURL, getRequestHeaders, handleCors, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getResponseStatusText } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/h3@1.12.0/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, sendNoContent, setHeader, assertMethod, readFormData, getValidatedRouterParams, getValidatedQuery, getHeader, getRequestWebStream, readValidatedBody, getQuery as getQuery$1, getCookie, getRequestURL, getRequestHeaders, handleCors, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getHeaders, parseCookies, isMethod, getRequestHost, getRequestProtocol, getResponseHeader, setCookie, readRawBody, sendError, getResponseStatusText } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/h3@1.12.0/node_modules/h3/dist/index.mjs';
+import { PrismaClient } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@prisma+client@5.19.1_prisma@5.19.1/node_modules/@prisma/client/default.js';
+import GithubProvider from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_react-dom@18.3.1_react@18.3.1__react@18.3.1___n6z5nwibu2hu277drdekf6buby/node_modules/next-auth/providers/github.js';
+import GoogleProvider from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_react-dom@18.3.1_react@18.3.1__react@18.3.1___n6z5nwibu2hu277drdekf6buby/node_modules/next-auth/providers/google.js';
 import { Client } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@notionhq+client@2.2.15/node_modules/@notionhq/client/build/src/index.js';
-import { ofetch, createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs';
+import { AuthHandler } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_react-dom@18.3.1_react@18.3.1__react@18.3.1___n6z5nwibu2hu277drdekf6buby/node_modules/next-auth/core/index.js';
+import defu, { defuFn, defu as defu$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ufo@1.5.4/node_modules/ufo/dist/index.mjs';
+import Stripe from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/stripe@16.11.0/node_modules/stripe/esm/stripe.esm.node.js';
+import { ofetch, createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs';
 import { z } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/zod@3.23.8/node_modules/zod/lib/index.mjs';
 import destr, { destr as destr$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/destr@2.0.3/node_modules/destr/dist/index.mjs';
 import ms from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js';
 import { createH3StorageHandler } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/dist/server.mjs';
 import mime from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/mime@4.0.4/node_modules/mime/dist/src/index.js';
-import defu, { defuFn, defu as defu$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
 import { randomUUID } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/uncrypto@0.1.3/node_modules/uncrypto/dist/crypto.node.mjs';
 import { parse as parse$1, extname } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/pathe@1.1.2/node_modules/pathe/dist/index.mjs';
 import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/vue-bundle-renderer@2.1.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
@@ -53,6 +58,7 @@ import rehypeRaw from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_m
 import { detab } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/detab@3.0.2/node_modules/detab/index.js';
 import { toString } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/hast-util-to-string@3.0.0/node_modules/hast-util-to-string/index.js';
 import Slugger from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/github-slugger@2.0.0/node_modules/github-slugger/index.js';
+import getURL from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/requrl@3.0.2/node_modules/requrl/dist/requrl.js';
 import BaseStyle from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@primevue+core@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/@primevue/core/base/style/index.mjs';
 import { Theme } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@primeuix+styled@0.0.5/node_modules/@primeuix/styled/index.mjs';
 import httpDriver from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/http.mjs';
@@ -6116,10 +6122,43 @@ const _inlineRuntimeConfig = {
       "defaultScriptOptions": {
         "trigger": "onNuxtReady"
       }
+    },
+    "auth": {
+      "computed": {
+        "origin": "http://localhost:3000",
+        "pathname": "/api/auth",
+        "fullBaseUrl": "http://localhost:3000/api/auth"
+      },
+      "isEnabled": true,
+      "disableServerSideAuth": false,
+      "originEnvKey": "AUTH_ORIGIN",
+      "sessionRefresh": {
+        "enablePeriodically": true,
+        "enableOnWindowFocus": true,
+        "handler": ""
+      },
+      "globalAppMiddleware": {
+        "isEnabled": false,
+        "allow404WithoutAuth": true,
+        "addDefaultCallbackUrl": true
+      },
+      "baseURL": "http://localhost:3000/api/auth",
+      "provider": {
+        "type": "authjs",
+        "trustHost": false,
+        "defaultProvider": "github",
+        "addDefaultCallbackUrl": true
+      }
     }
   },
+  "AUTH_SECRET": "nkYOxfbrFebJbXrTRtPA2JrSl2I3gqB7REyBrvp3F8o",
+  "GITHUB_CLIENT_ID": "Ov23lih8oDuvXGkYCLqk",
+  "GITHUB_CLIENT_SECRET": "15dce75c9ad32af844107fddab2e203c607f0ded",
+  "STRIPE_PUBLISHABLE_KEY": "pk_test_51PzDwqKwKV8UfrWqhNGSI7wixXk5ZzW0EVDTshoRI8MXSDe1g4pOTpwktph0RJO0WhStey2mGJoaKXFxwpmvydxd00p38Jr0PW",
+  "STRIPE_WEBHOOK_SECRET_KEY": "whsec_TadsadwfICEQvHQR5L7WazfXSbTgqXkv",
+  "STRIPE_SECRET_KEY": "sk_test_51PzDwqKwKV8UfrWqBuE05wTLx7I8pl2hrEqvdkYLcx4KjJkUbhv3vxPjR6C28PBoPhbFPudDkNEk2Ms0hs4E7ylu00qXMvATEy",
   "private": {
-    "stripeSecretKey": "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"
+    "stripeSecretKey": "sk_test_51PzDwqKwKV8UfrWqBuE05wTLx7I8pl2hrEqvdkYLcx4KjJkUbhv3vxPjR6C28PBoPhbFPudDkNEk2Ms0hs4E7ylu00qXMvATEy"
   },
   "hub": {
     "projectUrl": "",
@@ -6837,7 +6876,7 @@ function onConsoleLog(callback) {
   consola.wrapConsole();
 }
 
-function defineNitroPlugin$1(def) {
+function defineNitroPlugin$2(def) {
   return def;
 }
 
@@ -8315,9 +8354,22 @@ function proxyHubKV(projectUrl, secretKey) {
   };
 }
 
+const prisma$4 = new PrismaClient();
+const getAccountsByEmail = async (email) => {
+  return await prisma$4.account.findMany({
+    where: {
+      user: {
+        email
+      }
+    }
+  });
+};
+
+const stripe = new Stripe(useRuntimeConfig().STRIPE_SECRET_KEY);
+
 const hubHooks = createHooks();
 
-const _0rfBsfuKg9 = defineNitroPlugin$1(async () => {
+const _0rfBsfuKg9 = defineNitroPlugin$2(async () => {
   await globalThis.__env__;
   await hubHooks.callHookParallel("bindings:ready");
 });
@@ -9866,7 +9918,7 @@ function serverQueryContent(event, query, ...pathParts) {
   return queryBuilder;
 }
 
-const _GOSye4lCMP = defineNitroPlugin$1(async (nitro) => {
+const _GOSye4lCMP = defineNitroPlugin$2(async (nitro) => {
   const storage = useStorage();
   const unwatch = await storage.watch(async (event, key) => {
     if (key.startsWith("content:source")) {
@@ -9878,8 +9930,59 @@ const _GOSye4lCMP = defineNitroPlugin$1(async (nitro) => {
   });
 });
 
-const runtimeConfig = useRuntimeConfig();
-const config = runtimeConfig?.public?.primevue ?? {};
+const ERROR_MESSAGES = {
+  NO_SECRET: "AUTH_NO_SECRET: No `secret` - this is an error in production, see https://sidebase.io/nuxt-auth/resources/errors. You can ignore this during development",
+  NO_ORIGIN: "AUTH_NO_ORIGIN: No `origin` - this is an error in production, see https://sidebase.io/nuxt-auth/resources/errors. You can ignore this during development"
+};
+
+const isProduction = "development" === "production";
+function useTypedBackendConfig(runtimeConfig, type) {
+  const provider = runtimeConfig.public.auth.provider;
+  if (provider.type === type) {
+    return provider;
+  }
+  throw new Error("RuntimeError: Type must match at this point");
+}
+
+function getServerOrigin(event) {
+  const config = useRuntimeConfig();
+  const envOriginKey = config.public.auth.originEnvKey;
+  const envFromRuntimeConfig = extractFromRuntimeConfig(config, envOriginKey);
+  const envOrigin = envFromRuntimeConfig ?? process.env[envOriginKey];
+  if (envOrigin) {
+    return envOrigin;
+  }
+  const runtimeConfigOrigin = config.public.auth.computed.origin;
+  if (runtimeConfigOrigin) {
+    return runtimeConfigOrigin;
+  }
+  if (event && !isProduction) {
+    return getURL(event.node.req, false);
+  }
+  throw new Error(ERROR_MESSAGES.NO_ORIGIN);
+}
+function extractFromRuntimeConfig(config, envVariableName) {
+  let normalized = envVariableName.startsWith("NUXT_") ? envVariableName.slice(5) : envVariableName;
+  normalized = camelCase(normalized, { normalize: true });
+  const extracted = config[normalized];
+  return typeof extracted === "string" ? extracted : void 0;
+}
+
+function defineNitroPlugin$1(def) {
+  return def;
+}
+const _qY5WFLZwSy = defineNitroPlugin$1(() => {
+  try {
+    getServerOrigin();
+  } catch (error) {
+    {
+      console.info(ERROR_MESSAGES.NO_ORIGIN);
+    }
+  }
+});
+
+const runtimeConfig$2 = useRuntimeConfig();
+const config = runtimeConfig$2?.public?.primevue ?? {};
 const { options = {} } = config;
 
 const stylesToTop = [].join('');
@@ -10003,6 +10106,7 @@ const plugins = [
 _jOjPXCm0uP,
 _0rfBsfuKg9,
 _GOSye4lCMP,
+_qY5WFLZwSy,
 _vq8Dsw9hts,
 _NW3GuMI1wN
 ];
@@ -10643,6 +10747,7 @@ const _a3haAa = eventHandler((event) => {
   );
 });
 
+const _lazy_oTseQj = () => Promise.resolve().then(function () { return _____$1; });
 const _lazy_jifqHN = () => Promise.resolve().then(function () { return cached_get$1; });
 const _lazy_exU3Ta = () => Promise.resolve().then(function () { return _pathname__delete$1; });
 const _lazy_TAN1Ca = () => Promise.resolve().then(function () { return index_get$9; });
@@ -10655,6 +10760,9 @@ const _lazy_k4kzHP = () => Promise.resolve().then(function () { return notionPag
 const _lazy_azoFBd = () => Promise.resolve().then(function () { return notion$2; });
 const _lazy_sz6Qsj = () => Promise.resolve().then(function () { return index_get$5; });
 const _lazy_FCslW2 = () => Promise.resolve().then(function () { return index_put$1; });
+const _lazy_Jp6WYo = () => Promise.resolve().then(function () { return createCheckoutSession$1; });
+const _lazy_u3kKaB = () => Promise.resolve().then(function () { return createPortalSession$1; });
+const _lazy_sB4I9J = () => Promise.resolve().then(function () { return webhook$1; });
 const _lazy_6Y6PP9 = () => Promise.resolve().then(function () { return ____feature_$1; });
 const _lazy_u4AdK7 = () => Promise.resolve().then(function () { return index_head$1; });
 const _lazy_RHvDbC = () => Promise.resolve().then(function () { return manifest_get$1; });
@@ -10685,6 +10793,7 @@ const _lazy_TMQrhY = () => Promise.resolve().then(function () { return renderer$
 
 const handlers = [
   { route: '', handler: _Y01CXN, lazy: false, middleware: true, method: undefined },
+  { route: '/api/auth/**', handler: _lazy_oTseQj, lazy: true, middleware: false, method: undefined },
   { route: '/api/cached', handler: _lazy_jifqHN, lazy: true, middleware: false, method: "get" },
   { route: '/api/images/:pathname', handler: _lazy_exU3Ta, lazy: true, middleware: false, method: "delete" },
   { route: '/api/images', handler: _lazy_TAN1Ca, lazy: true, middleware: false, method: "get" },
@@ -10697,6 +10806,9 @@ const handlers = [
   { route: '/api/notion', handler: _lazy_azoFBd, lazy: true, middleware: false, method: undefined },
   { route: '/api/redirects', handler: _lazy_sz6Qsj, lazy: true, middleware: false, method: "get" },
   { route: '/api/redirects', handler: _lazy_FCslW2, lazy: true, middleware: false, method: "put" },
+  { route: '/api/stripe/create-checkout-session', handler: _lazy_Jp6WYo, lazy: true, middleware: false, method: undefined },
+  { route: '/api/stripe/create-portal-session', handler: _lazy_u3kKaB, lazy: true, middleware: false, method: undefined },
+  { route: '/api/stripe/webhook', handler: _lazy_sB4I9J, lazy: true, middleware: false, method: undefined },
   { route: '/api/_hub/**:feature', handler: _lazy_6Y6PP9, lazy: true, middleware: false, method: undefined },
   { route: '/api/_hub', handler: _lazy_u4AdK7, lazy: true, middleware: false, method: "head" },
   { route: '/api/_hub/manifest', handler: _lazy_RHvDbC, lazy: true, middleware: false, method: "get" },
@@ -10741,6 +10853,9 @@ const handlers = [
 
 const handlersMeta = [
   {
+    "route": "/api/auth/**"
+  },
+  {
     "route": "/api/cached",
     "method": "get"
   },
@@ -10783,6 +10898,15 @@ const handlersMeta = [
   {
     "route": "/api/redirects",
     "method": "put"
+  },
+  {
+    "route": "/api/stripe/create-checkout-session"
+  },
+  {
+    "route": "/api/stripe/create-portal-session"
+  },
+  {
+    "route": "/api/stripe/webhook"
   },
   {
     "route": "/api/_hub/**:feature"
@@ -11200,6 +11324,505 @@ const errorDev = /*#__PURE__*/Object.freeze({
   template: template$1
 });
 
+const isNonEmptyObject = (obj) => typeof obj === "object" && obj !== null && Object.keys(obj).length > 0;
+
+let preparedAuthjsHandler;
+let usedSecret;
+function NuxtAuthHandler(nuxtAuthOptions) {
+  const trustHostUserPreference = useTypedBackendConfig(useRuntimeConfig(), "authjs").trustHost;
+  usedSecret = nuxtAuthOptions?.secret;
+  if (!usedSecret) {
+    {
+      console.info(ERROR_MESSAGES.NO_SECRET);
+      usedSecret = "secret";
+    }
+  }
+  const options = defu$1(nuxtAuthOptions, {
+    secret: usedSecret,
+    logger: void 0,
+    providers: [],
+    // SAFETY: We trust host here because `getRequestURLFromH3Event` is responsible for producing a trusted URL
+    trustHost: true,
+    // AuthJS uses `/auth` as default, but we rely on `/api/auth` (same as in previous `next-auth`)
+    basePath: "/api/auth"
+    // Uncomment to enable framework-author specific functionality
+    // raw: raw as typeof raw
+  });
+  if (preparedAuthjsHandler) {
+    console.error("You setup the auth handler for a second time - this is likely undesired. Make sure that you only call `NuxtAuthHandler( ... )` once");
+  }
+  preparedAuthjsHandler = (req) => AuthHandler({ req, options });
+  return eventHandler(async (event) => {
+    const { res } = event.node;
+    const nextRequest = await createRequestForAuthjs(event, trustHostUserPreference);
+    const nextResult = await preparedAuthjsHandler(nextRequest);
+    if (nextResult.status) {
+      res.statusCode = nextResult.status;
+    }
+    nextResult.cookies?.forEach((cookie) => setCookieDeduped(event, cookie.name, cookie.value, cookie.options));
+    nextResult.headers?.forEach((header) => appendHeaderDeduped(event, header.key, header.value));
+    if (!nextResult.redirect) {
+      return nextResult.body;
+    }
+    if (nextRequest.body?.json) {
+      return { url: nextResult.redirect };
+    }
+    return await sendRedirect(event, nextResult.redirect);
+  });
+}
+async function getServerSession(event) {
+  const runtimeConfig = useRuntimeConfig();
+  const authBasePath = runtimeConfig.public.auth.computed.pathname;
+  const trustHostUserPreference = useTypedBackendConfig(runtimeConfig, "authjs").trustHost;
+  if (event.path && event.path.startsWith(authBasePath)) {
+    return null;
+  }
+  const sessionUrlPath = joinURL(authBasePath, "/session");
+  const headers = getHeaders(event);
+  if (!preparedAuthjsHandler) {
+    await $fetch(sessionUrlPath, { headers }).catch((error) => error.data);
+    if (!preparedAuthjsHandler) {
+      throw createError({ statusCode: 500, statusMessage: "Tried to get server session without setting up an endpoint to handle authentication (see https://github.com/sidebase/nuxt-auth#quick-start)" });
+    }
+  }
+  const sessionUrlBase = getRequestBaseFromH3Event(event, trustHostUserPreference);
+  const sessionUrl = new URL(sessionUrlPath, sessionUrlBase);
+  const authjsRequest = {
+    action: "session",
+    method: "GET",
+    headers,
+    body: void 0,
+    cookies: parseCookies(event),
+    providerId: void 0,
+    error: void 0,
+    host: sessionUrl.origin,
+    query: Object.fromEntries(sessionUrl.searchParams)
+  };
+  const authjsResponse = await preparedAuthjsHandler(authjsRequest);
+  const session = authjsResponse.body;
+  if (isNonEmptyObject(session)) {
+    return session;
+  }
+  return null;
+}
+async function createRequestForAuthjs(event, trustHostUserPreference) {
+  const nextRequest = {
+    host: getRequestURLFromH3Event(event, trustHostUserPreference).origin,
+    body: void 0,
+    cookies: parseCookies(event),
+    query: void 0,
+    headers: getHeaders(event),
+    method: event.method,
+    providerId: void 0,
+    error: void 0
+  };
+  const query = getQuery$1(event);
+  const { action, providerId } = parseActionAndProvider(event);
+  const error = query.error;
+  if (Array.isArray(error)) {
+    throw createError({ statusCode: 400, statusMessage: "Error query parameter can only appear once" });
+  }
+  const body = isMethod(event, ["PATCH", "POST", "PUT", "DELETE"]) ? await readBody(event) : void 0;
+  return {
+    ...nextRequest,
+    body,
+    query,
+    action,
+    providerId,
+    error: error ? String(error) : void 0
+  };
+}
+function getRequestURLFromH3Event(event, trustHost) {
+  const path = (event.node.req.originalUrl || event.path).replace(
+    /^[/\\]+/g,
+    "/"
+  );
+  const base = getRequestBaseFromH3Event(event, trustHost);
+  return new URL(path, base);
+}
+function getRequestBaseFromH3Event(event, trustHost) {
+  if (trustHost) {
+    const host = getRequestHost(event, { xForwardedHost: trustHost });
+    const protocol = getRequestProtocol(event);
+    return `${protocol}://${host}`;
+  } else {
+    const origin = getServerOrigin(event);
+    return origin;
+  }
+}
+const SUPPORTED_ACTIONS = ["providers", "session", "csrf", "signin", "signout", "callback", "verify-request", "error", "_log"];
+function parseActionAndProvider({ context }) {
+  const params = context.params?._?.split("/");
+  if (!params || ![1, 2].includes(params.length)) {
+    throw createError({ statusCode: 400, statusMessage: `Invalid path used for auth-endpoint. Supply either one path parameter (e.g., \`/api/auth/session\`) or two (e.g., \`/api/auth/signin/github\` after the base path (in previous examples base path was: \`/api/auth/\`. Received \`${params}\`` });
+  }
+  const [unvalidatedAction, providerId] = params;
+  const action = SUPPORTED_ACTIONS.find((action2) => action2 === unvalidatedAction);
+  if (!action) {
+    throw createError({ statusCode: 400, statusMessage: `Called endpoint with unsupported action ${unvalidatedAction}. Only the following actions are supported: ${SUPPORTED_ACTIONS.join(", ")}` });
+  }
+  return { action, providerId };
+}
+function appendHeaderDeduped(event, name, value) {
+  let current = getResponseHeader(event, name);
+  if (!current) {
+    setResponseHeader(event, name, value);
+    return;
+  }
+  if (!Array.isArray(current)) {
+    current = [current.toString()];
+  }
+  if (current.includes(value)) {
+    return;
+  }
+  current.push(value);
+  setResponseHeader(event, name, current);
+}
+function setCookieDeduped(event, name, value, serializeOptions) {
+  let setCookiesHeader = getResponseHeader(event, "set-cookie");
+  if (setCookiesHeader) {
+    if (!Array.isArray(setCookiesHeader)) {
+      setCookiesHeader = [setCookiesHeader.toString()];
+    }
+    const filterBy = `${name}=`;
+    setCookiesHeader = setCookiesHeader.filter((cookie) => !cookie.startsWith(filterBy));
+    setResponseHeader(event, "set-cookie", setCookiesHeader);
+  }
+  setCookie(event, name, value, serializeOptions);
+}
+
+var dist = {};
+
+Object.defineProperty(dist, "__esModule", { value: true });
+var PrismaAdapter_1 = dist.PrismaAdapter = void 0;
+/**
+ * ## Setup
+ *
+ * Add this adapter to your `pages/api/[...nextauth].js` next-auth configuration object:
+ *
+ * ```js title="pages/api/auth/[...nextauth].js"
+ * import NextAuth from "next-auth"
+ * import GoogleProvider from "next-auth/providers/google"
+ * import { PrismaAdapter } from "@next-auth/prisma-adapter"
+ * import { PrismaClient } from "@prisma/client"
+ *
+ * const prisma = new PrismaClient()
+ *
+ * export default NextAuth({
+ *   adapter: PrismaAdapter(prisma),
+ *   providers: [
+ *     GoogleProvider({
+ *       clientId: process.env.GOOGLE_CLIENT_ID,
+ *       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+ *     }),
+ *   ],
+ * })
+ * ```
+ *
+ * ### Create the Prisma schema from scratch
+ *
+ * You need to use at least Prisma 2.26.0. Create a schema file in `prisma/schema.prisma` similar to this one:
+ *
+ * > This schema is adapted for use in Prisma and based upon our main [schema](https://authjs.dev/reference/adapters#models)
+ *
+ * ```json title="schema.prisma"
+ * datasource db {
+ *   provider = "postgresql"
+ *   url      = env("DATABASE_URL")
+ *   shadowDatabaseUrl = env("SHADOW_DATABASE_URL") // Only needed when using a cloud provider that doesn't support the creation of new databases, like Heroku. Learn more: https://pris.ly/d/migrate-shadow
+ * }
+ *
+ * generator client {
+ *   provider        = "prisma-client-js"
+ *   previewFeatures = ["referentialActions"] // You won't need this in Prisma 3.X or higher.
+ * }
+ *
+ * model Account {
+ *   id                 String  @id @default(cuid())
+ *   userId             String
+ *   type               String
+ *   provider           String
+ *   providerAccountId  String
+ *   refresh_token      String?  @db.Text
+ *   access_token       String?  @db.Text
+ *   expires_at         Int?
+ *   token_type         String?
+ *   scope              String?
+ *   id_token           String?  @db.Text
+ *   session_state      String?
+ *
+ *   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ *
+ *   @@unique([provider, providerAccountId])
+ * }
+ *
+ * model Session {
+ *   id           String   @id @default(cuid())
+ *   sessionToken String   @unique
+ *   userId       String
+ *   expires      DateTime
+ *   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+ * }
+ *
+ * model User {
+ *   id            String    @id @default(cuid())
+ *   name          String?
+ *   email         String?   @unique
+ *   emailVerified DateTime?
+ *   image         String?
+ *   accounts      Account[]
+ *   sessions      Session[]
+ * }
+ *
+ * model VerificationToken {
+ *   identifier String
+ *   token      String   @unique
+ *   expires    DateTime
+ *
+ *   @@unique([identifier, token])
+ * }
+ * ```
+ *
+ * :::note
+ * When using the MySQL connector for Prisma, the [Prisma `String` type](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string) gets mapped to `varchar(191)` which may not be long enough to store fields such as `id_token` in the `Account` model. This can be avoided by explicitly using the `Text` type with `@db.Text`.
+ * :::
+ *
+ *
+ * ### Create the Prisma schema with `prisma migrate`
+ *
+ * This will create an SQL migration file and execute it:
+ *
+ * ```
+ * npx prisma migrate dev
+ * ```
+ *
+ * Note that you will need to specify your database connection string in the environment variable `DATABASE_URL`. You can do this by setting it in a `.env` file at the root of your project.
+ *
+ * To learn more about [Prisma Migrate](https://www.prisma.io/migrate), check out the [Migrate docs](https://www.prisma.io/docs/concepts/components/prisma-migrate).
+ *
+ * ### Generating the Prisma Client
+ *
+ * Once you have saved your schema, use the Prisma CLI to generate the Prisma Client:
+ *
+ * ```
+ * npx prisma generate
+ * ```
+ *
+ * To configure your database to use the new schema (i.e. create tables and columns) use the `prisma migrate` command:
+ *
+ * ```
+ * npx prisma migrate dev
+ * ```
+ *
+ * ### MongoDB support
+ *
+ * Prisma supports MongoDB, and so does Auth.js. Following the instructions of the [Prisma documentation](https://www.prisma.io/docs/concepts/database-connectors/mongodb) on the MongoDB connector, things you have to change are:
+ *
+ * 1. Make sure that the id fields are mapped correctly
+ *
+ * ```prisma
+ * id  String  @id @default(auto()) @map("_id") @db.ObjectId
+ * ```
+ *
+ * 2. The Native database type attribute to `@db.String` from `@db.Text` and userId to `@db.ObjectId`.
+ *
+ * ```prisma
+ * user_id            String   @db.ObjectId
+ * refresh_token      String?  @db.String
+ * access_token       String?  @db.String
+ * id_token           String?  @db.String
+ * ```
+ *
+ * Everything else should be the same.
+ *
+ * ### Naming Conventions
+ *
+ * If mixed snake_case and camelCase column names is an issue for you and/or your underlying database system, we recommend using Prisma's `@map()`([see the documentation here](https://www.prisma.io/docs/concepts/components/prisma-schema/names-in-underlying-database)) feature to change the field names. This won't affect Auth.js, but will allow you to customize the column names to whichever naming convention you wish.
+ *
+ * For example, moving to `snake_case` and plural table names.
+ *
+ * ```json title="schema.prisma"
+ * model Account {
+ *   id                 String  @id @default(cuid())
+ *   userId             String  @map("user_id")
+ *   type               String
+ *   provider           String
+ *   providerAccountId  String  @map("provider_account_id")
+ *   refresh_token      String? @db.Text
+ *   access_token       String? @db.Text
+ *   expires_at         Int?
+ *   token_type         String?
+ *   scope              String?
+ *   id_token           String? @db.Text
+ *   session_state      String?
+ *
+ *   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ *
+ *   @@unique([provider, providerAccountId])
+ *   @@map("accounts")
+ * }
+ *
+ * model Session {
+ *   id           String   @id @default(cuid())
+ *   sessionToken String   @unique @map("session_token")
+ *   userId       String   @map("user_id")
+ *   expires      DateTime
+ *   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+ *
+ *   @@map("sessions")
+ * }
+ *
+ * model User {
+ *   id            String    @id @default(cuid())
+ *   name          String?
+ *   email         String?   @unique
+ *   emailVerified DateTime? @map("email_verified")
+ *   image         String?
+ *   accounts      Account[]
+ *   sessions      Session[]
+ *
+ *   @@map("users")
+ * }
+ *
+ * model VerificationToken {
+ *   identifier String
+ *   token      String   @unique
+ *   expires    DateTime
+ *
+ *   @@unique([identifier, token])
+ *   @@map("verificationtokens")
+ * }
+ * ```
+ *
+ **/
+function PrismaAdapter(p) {
+    return {
+        createUser: (data) => p.user.create({ data }),
+        getUser: (id) => p.user.findUnique({ where: { id } }),
+        getUserByEmail: (email) => p.user.findUnique({ where: { email } }),
+        async getUserByAccount(provider_providerAccountId) {
+            var _a;
+            const account = await p.account.findUnique({
+                where: { provider_providerAccountId },
+                select: { user: true },
+            });
+            return (_a = account === null || account === void 0 ? void 0 : account.user) !== null && _a !== void 0 ? _a : null;
+        },
+        updateUser: ({ id, ...data }) => p.user.update({ where: { id }, data }),
+        deleteUser: (id) => p.user.delete({ where: { id } }),
+        linkAccount: (data) => p.account.create({ data }),
+        unlinkAccount: (provider_providerAccountId) => p.account.delete({
+            where: { provider_providerAccountId },
+        }),
+        async getSessionAndUser(sessionToken) {
+            const userAndSession = await p.session.findUnique({
+                where: { sessionToken },
+                include: { user: true },
+            });
+            if (!userAndSession)
+                return null;
+            const { user, ...session } = userAndSession;
+            return { user, session };
+        },
+        createSession: (data) => p.session.create({ data }),
+        updateSession: (data) => p.session.update({ where: { sessionToken: data.sessionToken }, data }),
+        deleteSession: (sessionToken) => p.session.delete({ where: { sessionToken } }),
+        async createVerificationToken(data) {
+            const verificationToken = await p.verificationToken.create({ data });
+            // @ts-expect-errors // MongoDB needs an ID, but we don't
+            if (verificationToken.id)
+                delete verificationToken.id;
+            return verificationToken;
+        },
+        async useVerificationToken(identifier_token) {
+            try {
+                const verificationToken = await p.verificationToken.delete({
+                    where: { identifier_token },
+                });
+                // @ts-expect-errors // MongoDB needs an ID, but we don't
+                if (verificationToken.id)
+                    delete verificationToken.id;
+                return verificationToken;
+            }
+            catch (error) {
+                // If token already used/deleted, just return null
+                // https://www.prisma.io/docs/reference/api-reference/error-reference#p2025
+                if (error.code === "P2025")
+                    return null;
+                throw error;
+            }
+        },
+    };
+}
+PrismaAdapter_1 = dist.PrismaAdapter = PrismaAdapter;
+
+const runtimeConfig$1 = useRuntimeConfig();
+const prisma$3 = new PrismaClient();
+const _____ = NuxtAuthHandler({
+  secret: runtimeConfig$1.AUTH_SECRET,
+  adapter: {
+    ...PrismaAdapter_1(prisma$3),
+    async linkAccount(account) {
+      const user = await prisma$3.user.findUniqueOrThrow({
+        where: { id: account.userId }
+      });
+      if (!user.email) {
+        throw new Error("User email is required to create a Stripe customer");
+      }
+      const customer = await stripe.customers.create({ email: user.email });
+      return prisma$3.account.create({
+        data: {
+          ...account,
+          stripe_customer_id: customer.id
+        }
+      });
+    }
+  },
+  providers: [
+    // @ts-expect-error
+    GoogleProvider.default({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
+    }),
+    GithubProvider.default({
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET
+    })
+  ],
+  callbacks: {
+    // Adding subscription status to default useAuth data object.
+    async session({ session }) {
+      var _a;
+      if ((_a = session.user) == null ? void 0 : _a.email) {
+        const accounts = await getAccountsByEmail(session.user.email);
+        return {
+          ...session,
+          user: {
+            ...session.user,
+            isSubscribed: accounts[0].is_subscribed,
+            plan: accounts[0].plan,
+            test: accounts[0].createdAt
+          }
+        };
+      }
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          isSubscribed: false,
+          plan: "tier-free",
+          test: "testing-default"
+        }
+      };
+    }
+  }
+});
+
+const _____$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: _____
+});
+
 const cached_get = cachedEventHandler(() => {
   return {
     now: Date.now()
@@ -11360,6 +11983,160 @@ const index_put = eventHandler(async (event) => {
 const index_put$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   default: index_put
+});
+
+const prisma$2 = new PrismaClient();
+const createCheckoutSession = eventHandler(async (event) => {
+  var _a;
+  const { lookup_key } = await readBody(event);
+  const authSession = await getServerSession(event);
+  if (authSession && ((_a = authSession.user) == null ? void 0 : _a.email)) {
+    const account = await prisma$2.account.findFirst({
+      where: {
+        user: {
+          email: authSession.user.email
+        }
+      }
+    });
+    if (account && account.stripe_customer_id && !account.is_subscribed) {
+      const prices = await stripe.prices.list({
+        lookup_keys: [lookup_key],
+        expand: ["data.product"]
+      });
+      const session = await stripe.checkout.sessions.create({
+        customer: account.stripe_customer_id,
+        // 6.1
+        billing_address_collection: "auto",
+        // 6.2
+        line_items: [
+          // 6.3
+          {
+            price: prices.data[0].id,
+            quantity: 1
+          }
+        ],
+        mode: "subscription",
+        // 6.4
+        success_url: `http://localhost:3000/success`,
+        // 6.5
+        cancel_url: `http://localhost:3000/cancelled`
+      });
+      if (session.url) {
+        return { url: session.url };
+      }
+    }
+  }
+});
+
+const createCheckoutSession$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: createCheckoutSession
+});
+
+const prisma$1 = new PrismaClient();
+const baseUrl = "http://localhost:3000";
+const createPortalSession = eventHandler(async (event) => {
+  var _a;
+  const session = await getServerSession(event);
+  if (!((_a = session == null ? void 0 : session.user) == null ? void 0 : _a.email)) {
+    return { error: "User not authenticated" };
+  }
+  const account = await prisma$1.account.findFirst({
+    where: {
+      user: {
+        email: session.user.email
+      }
+    }
+  });
+  if (!(account == null ? void 0 : account.stripe_customer_id)) {
+    return { error: "Stripe customer not found" };
+  }
+  const portalSession = await stripe.billingPortal.sessions.create({
+    customer: account.stripe_customer_id,
+    return_url: baseUrl
+  });
+  return { url: portalSession.url };
+});
+
+const createPortalSession$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: createPortalSession
+});
+
+const prisma = new PrismaClient();
+const runtimeConfig = useRuntimeConfig();
+const webhook = eventHandler(async (event) => {
+  const body = await readRawBody(event, false);
+  let stripeEvent = body;
+  let subscription;
+  let plan;
+  const signature = getHeader(event, "stripe-signature");
+  if (!body) {
+    return { error: "Invalid request body" };
+  }
+  if (!signature) {
+    return { error: "Invalid stripe-signature" };
+  }
+  try {
+    stripeEvent = stripe.webhooks.constructEvent(
+      body,
+      signature,
+      runtimeConfig.STRIPE_WEBHOOK_SECRET_KEY
+    );
+  } catch (err) {
+    const error = createError({
+      statusCode: 400,
+      statusMessage: `Webhook error: ${err}`
+    });
+    return sendError(event, error);
+  }
+  switch (stripeEvent.type) {
+    case "customer.subscription.deleted":
+      subscription = stripeEvent.data.object;
+      subscription.status;
+      await prisma.account.update({
+        where: {
+          stripe_customer_id: subscription.customer
+        },
+        data: {
+          is_subscribed: false
+        }
+      });
+      break;
+    case "customer.subscription.created":
+      subscription = stripeEvent.data.object;
+      subscription.status;
+      plan = stripeEvent.data.object.items.data[0].price.lookup_key;
+      await prisma.account.update({
+        where: {
+          stripe_customer_id: subscription.customer
+        },
+        data: {
+          is_subscribed: true,
+          plan
+        }
+      });
+      break;
+    case "customer.subscription.updated":
+      subscription = stripeEvent.data.object;
+      plan = stripeEvent.data.object.items.data[0].price.lookup_key;
+      await prisma.account.update({
+        where: {
+          stripe_customer_id: subscription.customer
+        },
+        data: {
+          plan
+        }
+      });
+    default:
+      console.log(`Unhandled event type ${stripeEvent.type}.`);
+  }
+  return { received: true };
+});
+
+const webhook$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: webhook
 });
 
 const ____feature_ = eventHandler((event) => {

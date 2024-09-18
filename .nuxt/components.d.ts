@@ -3,8 +3,11 @@ import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
       'AddComment': typeof import("../app/components/AddComment.vue")['default']
+    'AuthAvatar': typeof import("../app/components/Auth/Avatar.vue")['default']
+    'AuthMenu': typeof import("../app/components/Auth/Menu.vue")['default']
     'ClassRow': typeof import("../app/components/ClassRow.vue")['default']
     'ClassTable': typeof import("../app/components/ClassTable.vue")['default']
+    'CourseCard': typeof import("../app/components/Course/Card.vue")['default']
     'CourseComment': typeof import("../app/components/Course/Comment.vue")['default']
     'CourseCommentList': typeof import("../app/components/Course/CommentList.vue")['default']
     'CourseDetails': typeof import("../app/components/Course/Details.vue")['default']
@@ -92,8 +95,11 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyAddComment': typeof import("../app/components/AddComment.vue")['default']
+    'LazyAuthAvatar': typeof import("../app/components/Auth/Avatar.vue")['default']
+    'LazyAuthMenu': typeof import("../app/components/Auth/Menu.vue")['default']
     'LazyClassRow': typeof import("../app/components/ClassRow.vue")['default']
     'LazyClassTable': typeof import("../app/components/ClassTable.vue")['default']
+    'LazyCourseCard': typeof import("../app/components/Course/Card.vue")['default']
     'LazyCourseComment': typeof import("../app/components/Course/Comment.vue")['default']
     'LazyCourseCommentList': typeof import("../app/components/Course/CommentList.vue")['default']
     'LazyCourseDetails': typeof import("../app/components/Course/Details.vue")['default']
@@ -187,8 +193,11 @@ declare module 'vue' {
 }
 
 export const AddComment: typeof import("../app/components/AddComment.vue")['default']
+export const AuthAvatar: typeof import("../app/components/Auth/Avatar.vue")['default']
+export const AuthMenu: typeof import("../app/components/Auth/Menu.vue")['default']
 export const ClassRow: typeof import("../app/components/ClassRow.vue")['default']
 export const ClassTable: typeof import("../app/components/ClassTable.vue")['default']
+export const CourseCard: typeof import("../app/components/Course/Card.vue")['default']
 export const CourseComment: typeof import("../app/components/Course/Comment.vue")['default']
 export const CourseCommentList: typeof import("../app/components/Course/CommentList.vue")['default']
 export const CourseDetails: typeof import("../app/components/Course/Details.vue")['default']
@@ -276,8 +285,11 @@ export const Body: typeof import("../node_modules/.pnpm/nuxt@3.13.0_@parcel+watc
 export const NuxtIsland: typeof import("../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyAddComment: typeof import("../app/components/AddComment.vue")['default']
+export const LazyAuthAvatar: typeof import("../app/components/Auth/Avatar.vue")['default']
+export const LazyAuthMenu: typeof import("../app/components/Auth/Menu.vue")['default']
 export const LazyClassRow: typeof import("../app/components/ClassRow.vue")['default']
 export const LazyClassTable: typeof import("../app/components/ClassTable.vue")['default']
+export const LazyCourseCard: typeof import("../app/components/Course/Card.vue")['default']
 export const LazyCourseComment: typeof import("../app/components/Course/Comment.vue")['default']
 export const LazyCourseCommentList: typeof import("../app/components/Course/CommentList.vue")['default']
 export const LazyCourseDetails: typeof import("../app/components/Course/Details.vue")['default']
