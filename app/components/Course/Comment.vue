@@ -1,20 +1,8 @@
 <script setup>
-import { Client } from "@notionhq/client";
-
 const props = defineProps({
   message: Object,
   userId: String,
 });
-
-const notion = new Client({
-  auth: "secret_yGXoB32pcSK3N5dab8EZbUbqxbPozeaYM2lSVTqDO7X",
-});
-
-// const { data: userData } = await useAsyncData("userData", () => {
-//   const response = notion.users.retrieve({ user_id: props.userId });
-
-//   return response;
-// });
 </script>
 
 <template>
@@ -33,7 +21,7 @@ const notion = new Client({
         </p> -->
         <p class="text-sm text-gray-600 dark:text-gray-400">
           <time pubdate datetime="2022-02-08" title="February 8th, 2022">
-            {{ new Date(message.created_at).toLocaleString("fr-FR") }}
+            {{ new Date(message.created_at).toLocaleString('fr-FR') }}
           </time>
         </p>
       </div>
