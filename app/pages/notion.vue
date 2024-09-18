@@ -21,7 +21,7 @@ const listView = ref(false);
     <CourseHeader
       image="https://res.cloudinary.com/dgbn0ttzf/image/upload/v1725362678/alex_hero_cover-min-1024x468_1_p3f8mt.jpg"
     />
-    <div class="container !max-w-screen-lg mt-10">
+    <div class="container-xxl mt-10">
       <div class="d-flex flex-wrap justify-content-between gap-4">
         <div class="card-title mb-0 me-1">
           <h5 class="mb-0">My Courses</h5>
@@ -59,7 +59,10 @@ const listView = ref(false);
         </div>
       </div>
       <div class="mt-6">
-        <div class="grid grid-cols-3 gap-4 mb-6" :class="listView && '!block'">
+        <div
+          class="grid grid-cols-3 gap-4 mb-6"
+          :class="listView && '!grid-cols-1'"
+        >
           <div class="" v-for="(item, i) in filtered" :key="`data${i}`">
             <CourseCard :item="item" :listView="listView" />
           </div>
