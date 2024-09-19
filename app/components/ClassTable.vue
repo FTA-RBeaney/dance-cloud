@@ -1,77 +1,77 @@
 <script setup>
-import DataTable from "primevue/datatable";
-import Column from "primevue/column";
-import ColumnGroup from "primevue/columngroup";
-import Row from "primevue/row";
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import ColumnGroup from 'primevue/columngroup';
+import Row from 'primevue/row';
 
 const lessons = reactive([
   {
-    level: "Level 1",
-    description: "Beginner",
+    level: 'Level 1',
+    description: 'Beginner',
     concession: false,
     price: 10,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 1",
-    description: "Beginner",
+    level: 'Level 1',
+    description: 'Beginner',
     concession: true,
     price: 6,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 1",
-    description: "Beginner",
+    level: 'Level 1',
+    description: 'Beginner',
     classCard: true,
     price: 1,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 2",
-    description: "Intermediate",
+    level: 'Level 2',
+    description: 'Intermediate',
     concession: false,
     price: 10,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 2",
-    description: "Intermediate",
+    level: 'Level 2',
+    description: 'Intermediate',
     concession: true,
     price: 6,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 2",
-    description: "Intermediate",
+    level: 'Level 2',
+    description: 'Intermediate',
     classCard: true,
     price: 1,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 1+2",
-    description: "Intermediate",
+    level: 'Level 1+2',
+    description: 'Intermediate',
     concession: false,
     price: 15,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 1 + 2",
-    description: "Intermediate",
+    level: 'Level 1 + 2',
+    description: 'Intermediate',
     concession: true,
     price: 10,
     total: 0,
     totalClassCards: 0,
   },
   {
-    level: "Level 1 + 2",
-    description: "Intermediate",
+    level: 'Level 1 + 2',
+    description: 'Intermediate',
     classCard: true,
     price: 1.5,
     total: 0,
@@ -80,7 +80,6 @@ const lessons = reactive([
 ]);
 
 const levelOneValues = (e, totalCards, isClassCard, i) => {
-  console.log(e, totalCards, isClassCard, i);
   if (isClassCard) {
     lessons[i].totalClassCards = totalCards || 0;
   } else {

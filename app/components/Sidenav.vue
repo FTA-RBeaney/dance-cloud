@@ -1,7 +1,8 @@
 <script setup>
-import { BookOpenText, House, Gem, Rss, GraduationCap } from "lucide-vue-next";
-const { data: databaseData } = await useAsyncData("databaseData", () => {
-  const response = $fetch("/api/notion");
+import { BookOpenText, House, Gem, Rss, GraduationCap } from 'lucide-vue-next';
+
+const { data: databaseData } = await useAsyncData('databaseData', () => {
+  const response = $fetch('/api/notion');
 
   return response;
 });

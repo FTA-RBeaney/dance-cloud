@@ -7,28 +7,29 @@ type IsAny<T> = 0 extends 1 & T ? true : false
 type InjectionType<A extends Plugin> = IsAny<A> extends true ? unknown : A extends Plugin<infer T> ? Decorate<T> : unknown
 
 type NuxtAppInjections = 
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/revive-payload.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/head/runtime/plugins/unhead.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/pages/runtime/plugins/router.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/navigation-repaint.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/revive-payload.server.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/chunk-reload.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/pages/runtime/plugins/check-if-page-unused.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-embedded@1.77.8_terser@5.31.6_/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+devtools@1.4.1_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2_sass-embedded@1.77.8_terser@5.31.6_/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@sidebase+nuxt-auth@0.9.2_magicast@0.3.5_next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_reac_n2qlc3zgxdpmfcbubxkyl63axq/node_modules/@sidebase/nuxt-auth/dist/runtime/plugin.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/plugins/ws.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@primevue+nuxt-module@4.0.5_@babel+parser@7.25.6_magicast@0.3.5_rollup@4.21.2_vue@3.4.38_typescript@5.5.4_/node_modules/@primevue/nuxt-module/dist/runtime/plugin.client.mjs").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/dev-server-logs.js").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/app/plugins/check-if-layout-used.js").default>
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/revive-payload.client.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/plugins/unhead.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/router.js").default> &
+  InjectionType<typeof import("../../node_modules/@prisma/nuxt/dist/runtime/plugin.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/navigation-repaint.client.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/check-outdated-build.client.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/revive-payload.server.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/check-if-page-unused.js").default> &
+  InjectionType<typeof import("../../node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server.js").default> &
+  InjectionType<typeof import("../../node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client.js").default> &
+  InjectionType<typeof import("../../node_modules/@sidebase/nuxt-auth/dist/runtime/plugin.js").default> &
+  InjectionType<typeof import("../../node_modules/@nuxt/content/dist/runtime/plugins/ws.js").default> &
+  InjectionType<typeof import("../../node_modules/@primevue/nuxt-module/dist/runtime/plugin.client.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/dev-server-logs.js").default> &
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/check-if-layout-used.js").default>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
 
   interface NuxtAppLiterals {
-    pluginName: 'nuxt:revive-payload:client' | 'nuxt:head' | 'nuxt:router' | 'nuxt:revive-payload:server' | 'nuxt:chunk-reload' | 'nuxt:global-components' | 'nuxt:prefetch' | 'nuxt:checkIfPageUnused' | 'nuxt:checkIfLayoutUsed'
+    pluginName: 'nuxt:revive-payload:client' | 'nuxt:head' | 'nuxt:router' | 'prisma-client' | 'nuxt:revive-payload:server' | 'nuxt:chunk-reload' | 'nuxt:global-components' | 'nuxt:prefetch' | 'nuxt:checkIfPageUnused' | 'nuxt:checkIfLayoutUsed'
   }
 }
 

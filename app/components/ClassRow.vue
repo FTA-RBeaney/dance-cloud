@@ -5,7 +5,7 @@ const props = defineProps({
 });
 
 const { lesson, index } = props;
-const emit = defineEmits(["calcTotals"]);
+const emit = defineEmits(['calcTotals']);
 
 const numberOfPeople = ref();
 const numberOfClassCards = ref();
@@ -19,13 +19,12 @@ const totalCards = computed(
 );
 
 function watchTotals(e, totalCards, index) {
-  emit("calcTotals", e.value, totalCards.value, props.lesson.classCard, index);
+  emit('calcTotals', e.value, totalCards.value, props.lesson.classCard, index);
 }
 
 watch(
   [totalPrice, totalCards],
   () => {
-    console.log("totalCards", totalCards);
     watchTotals(totalPrice, totalCards, index);
   },
   { immediate: true }

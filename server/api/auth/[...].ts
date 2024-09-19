@@ -55,7 +55,9 @@ export default NuxtAuthHandler({
             ...session.user,
             isSubscribed: accounts[0].is_subscribed,
             plan: accounts[0].plan,
-            test: accounts[0].createdAt,
+            createdAt: accounts[0].createdAt,
+            userId: accounts[0].userId,
+            email: accounts[0].email,
           },
         };
       }
@@ -66,7 +68,8 @@ export default NuxtAuthHandler({
           ...session.user,
           isSubscribed: false,
           plan: 'tier-free',
-          test: 'testing-default',
+          createdAt: 'testing-default',
+          userId: 'none',
         },
       };
     },

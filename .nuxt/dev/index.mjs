@@ -3,68 +3,68 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { mkdirSync } from 'node:fs';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, sendNoContent, setHeader, assertMethod, readFormData, getValidatedRouterParams, getValidatedQuery, getHeader, getRequestWebStream, readValidatedBody, getQuery as getQuery$1, getCookie, getRequestURL, getRequestHeaders, handleCors, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getHeaders, parseCookies, isMethod, getRequestHost, getRequestProtocol, getResponseHeader, setCookie, readRawBody, sendError, getResponseStatusText } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/h3@1.12.0/node_modules/h3/dist/index.mjs';
-import { PrismaClient } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@prisma+client@5.19.1_prisma@5.19.1/node_modules/@prisma/client/default.js';
-import GithubProvider from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_react-dom@18.3.1_react@18.3.1__react@18.3.1___n6z5nwibu2hu277drdekf6buby/node_modules/next-auth/providers/github.js';
-import GoogleProvider from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_react-dom@18.3.1_react@18.3.1__react@18.3.1___n6z5nwibu2hu277drdekf6buby/node_modules/next-auth/providers/google.js';
-import { Client } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@notionhq+client@2.2.15/node_modules/@notionhq/client/build/src/index.js';
-import { AuthHandler } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/next-auth@4.21.1_next@13.5.6_@babel+core@7.25.2_react-dom@18.3.1_react@18.3.1__react@18.3.1___n6z5nwibu2hu277drdekf6buby/node_modules/next-auth/core/index.js';
-import defu, { defuFn, defu as defu$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/defu@6.1.4/node_modules/defu/dist/defu.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ufo@1.5.4/node_modules/ufo/dist/index.mjs';
-import Stripe from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/stripe@16.11.0/node_modules/stripe/esm/stripe.esm.node.js';
-import { ofetch, createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs';
-import { z } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/zod@3.23.8/node_modules/zod/lib/index.mjs';
-import destr, { destr as destr$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/destr@2.0.3/node_modules/destr/dist/index.mjs';
-import ms from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ms@2.1.2/node_modules/ms/index.js';
-import { createH3StorageHandler } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/dist/server.mjs';
-import mime from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/mime@4.0.4/node_modules/mime/dist/src/index.js';
-import { randomUUID } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/uncrypto@0.1.3/node_modules/uncrypto/dist/crypto.node.mjs';
-import { parse as parse$1, extname } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/pathe@1.1.2/node_modules/pathe/dist/index.mjs';
-import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/vue-bundle-renderer@2.1.0/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { stringify, uneval } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/devalue@5.0.0/node_modules/devalue/index.js';
-import { renderToString } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue/server-renderer/index.mjs';
-import { propsToString, renderSSRHead } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@unhead+ssr@1.10.0/node_modules/@unhead/ssr/dist/index.mjs';
-import { createCall, createFetch } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unenv@1.10.0/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/klona@2.0.6/node_modules/klona/dist/index.mjs';
-import { snakeCase, kebabCase, pascalCase, camelCase } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/scule@1.3.0/node_modules/scule/dist/index.mjs';
-import { hash } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/fs.mjs';
-import { toRouteMatcher, createRouter } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/radix3@1.1.2/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, createError, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, sendNoContent, setHeader, assertMethod, readFormData, getValidatedRouterParams, getValidatedQuery, getHeader, getRequestWebStream, readValidatedBody, getQuery as getQuery$1, getCookie, getRequestURL, getRequestHeaders, handleCors, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, readBody, getHeaders, parseCookies, isMethod, getRequestHost, getRequestProtocol, getResponseHeader, setCookie, readRawBody, sendError, getResponseStatusText } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/h3/dist/index.mjs';
+import { PrismaClient } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/@prisma/client/default.js';
+import GithubProvider from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/next-auth/providers/github.js';
+import GoogleProvider from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/next-auth/providers/google.js';
+import { Client } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/@notionhq/client/build/src/index.js';
+import { AuthHandler } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/next-auth/core/index.js';
+import defu, { defuFn, defu as defu$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/defu/dist/defu.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/ufo/dist/index.mjs';
+import Stripe from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/stripe/esm/stripe.esm.node.js';
+import { ofetch, createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/ofetch/dist/node.mjs';
+import { z } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/zod/lib/index.mjs';
+import destr, { destr as destr$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/destr/dist/index.mjs';
+import ms from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/ms/index.js';
+import { createH3StorageHandler } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unstorage/dist/server.mjs';
+import mime from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/mime/dist/src/index.js';
+import { randomUUID } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/uncrypto/dist/crypto.node.mjs';
+import { parse as parse$1, extname } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/pathe/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/devalue/index.js';
+import { renderToString } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/vue/server-renderer/index.mjs';
+import { propsToString, renderSSRHead } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/@unhead/ssr/dist/index.mjs';
+import { createCall, createFetch } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/hookable/dist/index.mjs';
+import { klona } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/klona/dist/index.mjs';
+import { snakeCase, kebabCase, pascalCase, camelCase } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/scule/dist/index.mjs';
+import { hash } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/ohash/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/radix3/dist/index.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { consola } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/consola@3.2.3/node_modules/consola/dist/index.mjs';
-import { getContext } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unctx@2.3.1/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/errx@0.1.0/node_modules/errx/dist/index.js';
-import { isVNode, version, unref } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/vue@3.4.38_typescript@5.5.4/node_modules/vue/index.mjs';
-import { unified } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unified@11.0.5/node_modules/unified/index.js';
-import { toString as toString$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/mdast-util-to-string@4.0.0/node_modules/mdast-util-to-string/index.js';
-import { postprocess, preprocess } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/micromark@4.0.0/node_modules/micromark/dev/index.js';
-import { stringifyPosition } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unist-util-stringify-position@4.0.0/node_modules/unist-util-stringify-position/index.js';
-import { markdownLineEnding, markdownSpace } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/micromark-util-character@2.1.0/node_modules/micromark-util-character/dev/index.js';
-import { push, splice } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/micromark-util-chunked@2.0.0/node_modules/micromark-util-chunked/dev/index.js';
-import { resolveAll } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/micromark-util-resolve-all@2.0.0/node_modules/micromark-util-resolve-all/index.js';
-import { normalizeUri } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/micromark-util-sanitize-uri@2.0.0/node_modules/micromark-util-sanitize-uri/dev/index.js';
-import slugify from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/slugify@1.6.6/node_modules/slugify/slugify.js';
-import remarkParse from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/remark-parse@11.0.0/node_modules/remark-parse/index.js';
-import remark2rehype from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/remark-rehype@11.1.0/node_modules/remark-rehype/index.js';
-import remarkMDC, { parseFrontMatter } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/remark-mdc@3.2.1/node_modules/remark-mdc/dist/index.mjs';
-import remarkEmoji from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/remark-emoji@5.0.1/node_modules/remark-emoji/index.js';
-import remarkGFM from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/remark-gfm@4.0.0/node_modules/remark-gfm/index.js';
-import rehypeExternalLinks from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/rehype-external-links@3.0.0/node_modules/rehype-external-links/index.js';
-import rehypeSortAttributeValues from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/rehype-sort-attribute-values@5.0.0/node_modules/rehype-sort-attribute-values/index.js';
-import rehypeSortAttributes from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/rehype-sort-attributes@5.0.0/node_modules/rehype-sort-attributes/index.js';
-import rehypeRaw from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/rehype-raw@7.0.0/node_modules/rehype-raw/index.js';
-import { detab } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/detab@3.0.2/node_modules/detab/index.js';
-import { toString } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/hast-util-to-string@3.0.0/node_modules/hast-util-to-string/index.js';
-import Slugger from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/github-slugger@2.0.0/node_modules/github-slugger/index.js';
-import getURL from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/requrl@3.0.2/node_modules/requrl/dist/requrl.js';
-import BaseStyle from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@primevue+core@4.0.5_vue@3.4.38_typescript@5.5.4_/node_modules/@primevue/core/base/style/index.mjs';
-import { Theme } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@primeuix+styled@0.0.5/node_modules/@primeuix/styled/index.mjs';
-import httpDriver from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/http.mjs';
-import cloudflareKVBindingDriver from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unstorage@1.10.2_ioredis@5.4.1/node_modules/unstorage/drivers/cloudflare-kv-binding.mjs';
-import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/unhead@1.10.0/node_modules/unhead/dist/index.mjs';
-import { defineHeadPlugin } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/@unhead+shared@1.10.0/node_modules/@unhead/shared/dist/index.mjs';
+import { getContext } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unctx/dist/index.mjs';
+import { consola } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/consola/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/errx/dist/index.js';
+import { isVNode, version, unref } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/vue/index.mjs';
+import { unified } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unified/index.js';
+import { toString as toString$1 } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/mdast-util-to-string/index.js';
+import { postprocess, preprocess } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/micromark/dev/index.js';
+import { stringifyPosition } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unist-util-stringify-position/index.js';
+import { markdownLineEnding, markdownSpace } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/micromark-util-character/dev/index.js';
+import { push, splice } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/micromark-util-chunked/dev/index.js';
+import { resolveAll } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/micromark-util-resolve-all/index.js';
+import { normalizeUri } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/micromark-util-sanitize-uri/dev/index.js';
+import slugify from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/slugify/slugify.js';
+import remarkParse from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/remark-parse/index.js';
+import remark2rehype from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/remark-rehype/index.js';
+import remarkMDC, { parseFrontMatter } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/remark-mdc/dist/index.mjs';
+import remarkEmoji from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/remark-emoji/index.js';
+import remarkGFM from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/remark-gfm/index.js';
+import rehypeExternalLinks from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/rehype-external-links/index.js';
+import rehypeSortAttributeValues from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/rehype-sort-attribute-values/index.js';
+import rehypeSortAttributes from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/rehype-sort-attributes/index.js';
+import rehypeRaw from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/rehype-raw/index.js';
+import { detab } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/detab/index.js';
+import { toString } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/hast-util-to-string/index.js';
+import Slugger from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/github-slugger/index.js';
+import getURL from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/requrl/dist/requrl.js';
+import BaseStyle from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/@primevue/core/base/style/index.mjs';
+import { Theme } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/@primeuix/styled/index.mjs';
+import httpDriver from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unstorage/drivers/http.mjs';
+import cloudflareKVBindingDriver from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unstorage/drivers/cloudflare-kv-binding.mjs';
+import { createServerHead as createServerHead$1, CapoPlugin } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/@unhead/shared/dist/index.mjs';
 
 const r=Object.create(null),E=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return E()[o]??r[o]},has(e,o){const i=E();return o in i||o in r},set(e,o,i){const g=E(!0);return g[o]=i,!0},deleteProperty(e,o){if(!o)return !1;const i=E(!0);return delete i[o],!0},ownKeys(){const e=E(!0);return Object.keys(e)}}),t=typeof process<"u"&&process.env&&"development"||"",p=[["APPVEYOR"],["AWS_AMPLIFY","AWS_APP_ID",{ci:!0}],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"],["ZEABUR"],["CODESPHERE","CODESPHERE_APP_ID",{ci:!0}],["RAILWAY","RAILWAY_PROJECT_ID"],["RAILWAY","RAILWAY_SERVICE_ID"]];function B(){if(globalThis.process?.env)for(const e of p){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const l=B(),d=l.name;function n(e){return e?e!=="false":!1}const I=globalThis.process?.platform||"",T=n(s.CI)||l.ci!==!1,R=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const C=t==="test"||n(s.TEST);n(s.MINIMAL)||T||C||!R;const a=/^win/i.test(I);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||(R||a)&&s.TERM!=="dumb"||T);const _=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(_?.split(".")[0])||null;const W=globalThis.process||Object.create(null),c={versions:{}};new Proxy(W,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in c)return c[o]}});const A=globalThis.process?.release?.name==="node",L=!!globalThis.Bun||!!globalThis.process?.versions?.bun,D=!!globalThis.Deno,O=!!globalThis.fastly,S=!!globalThis.Netlify,N=!!globalThis.EdgeRuntime,u=globalThis.navigator?.userAgent==="Cloudflare-Workers",b=!!globalThis.__lagon__,F=[[S,"netlify"],[N,"edge-light"],[u,"workerd"],[O,"fastly"],[D,"deno"],[L,"bun"],[A,"node"],[b,"lagon"]];function G(){const e=F.find(o=>o[0]);if(e)return {name:e[1]}}const P=G();P?.name||"";
 
@@ -126,6 +126,9 @@ const _inlineRuntimeConfig = {
     "routeRules": {
       "/__nuxt_error": {
         "cache": false
+      },
+      "/api/_hub/**": {
+        "csurf": false
       },
       "/_scripts/**": {
         "headers": {
@@ -6118,7 +6121,7 @@ const _inlineRuntimeConfig = {
       }
     },
     "nuxt-scripts": {
-      "version": "0.7.1",
+      "version": "0.7.2",
       "defaultScriptOptions": {
         "trigger": "onNuxtReady"
       }
@@ -6149,6 +6152,10 @@ const _inlineRuntimeConfig = {
         "defaultProvider": "github",
         "addDefaultCallbackUrl": true
       }
+    },
+    "prisma": {
+      "log": [],
+      "errorFormat": "pretty"
     }
   },
   "AUTH_SECRET": "nkYOxfbrFebJbXrTRtPA2JrSl2I3gqB7REyBrvp3F8o",
@@ -6172,10 +6179,11 @@ const _inlineRuntimeConfig = {
     "ai": false,
     "analytics": false,
     "blob": true,
+    "browser": false,
     "cache": true,
     "database": true,
     "kv": true,
-    "version": "0.7.8",
+    "version": "0.7.19",
     "env": "production",
     "openapi": true,
     "bindings": {
@@ -6264,7 +6272,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "nuxt-scripts": {
-    "version": "0.7.1"
+    "version": "0.7.2"
   },
   "wrangler": {
     "configPath": "/Users/robertbeaney/Web Sites/dance-cloud/.data/hub/wrangler.toml",
@@ -6772,6 +6780,11 @@ function getRouteRulesForPath(path) {
   return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
 }
 
+const nitroAsyncContext = getContext("nitro-app", {
+  asyncContext: true,
+  AsyncLocalStorage: AsyncLocalStorage 
+});
+
 const script = `
 if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
   Object.defineProperty(window, '__NUXT_DEVTOOLS_TIME_METRIC__', {
@@ -6783,7 +6796,7 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _E5JK1gA1Nq = (function(nitro) {
+const _n2qJibMKoA = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -6808,7 +6821,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _jOjPXCm0uP = (nitroApp) => {
+const _b14YKeV90v = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -6859,7 +6872,8 @@ const _jOjPXCm0uP = (nitroApp) => {
       return;
     }
     try {
-      htmlContext.bodyAppend.unshift(`<script type="application/json" data-nuxt-logs="${appId}">${stringify(ctx.logs, { ...devReducers, ...ctx.event.context._payloadReducers })}<\/script>`);
+      const reducers = Object.assign(/* @__PURE__ */ Object.create(null), devReducers, ctx.event.context._payloadReducers);
+      htmlContext.bodyAppend.unshift(`<script type="application/json" data-nuxt-logs="${appId}">${stringify(ctx.logs, reducers)}<\/script>`);
     } catch (e) {
       const shortError = e instanceof Error && "toString" in e ? ` Received \`${e.toString()}\`.` : "";
       console.warn(`[nuxt] Failed to stringify dev server logs.${shortError} You can define your own reducer/reviver for rich types following the instructions in https://nuxt.com/docs/api/composables/use-nuxt-app#payload.`);
@@ -7820,6 +7834,13 @@ function hubBlob() {
       setHeader(event, "etag", object.httpEtag);
       return object.body;
     },
+    async get(pathname) {
+      const object = await bucket.get(decodeURI(pathname));
+      if (!object) {
+        return null;
+      }
+      return object.blob();
+    },
     async put(pathname, body, options = {}) {
       pathname = decodeURI(pathname);
       const { contentType: optionsContentType, contentLength, addRandomSuffix, prefix, customMetadata } = options;
@@ -7960,6 +7981,12 @@ function proxyHubBlob(projectUrl, secretKey) {
     async head(pathname) {
       return await blobAPI(`/head/${decodeURI(pathname)}`, {
         method: "GET"
+      });
+    },
+    async get(pathname) {
+      return await blobAPI(`/${decodeURI(pathname)}`, {
+        method: "GET",
+        responseType: "blob"
       });
     },
     async del(pathnames) {
@@ -8305,12 +8332,8 @@ function handleProxyError$1(err) {
   });
 }
 
-let _kv;
 function hubKV() {
   requireNuxtHubFeature("kv");
-  if (_kv) {
-    return _kv;
-  }
   const hub = useRuntimeConfig().hub;
   const binding = process.env.KV || globalThis.__env__?.KV || globalThis.KV;
   if (hub.remote && hub.projectUrl && !binding) {
@@ -8322,15 +8345,7 @@ function hubKV() {
         binding
       })
     });
-    _kv = {
-      keys: storage.getKeys,
-      get: storage.getItem,
-      set: storage.setItem,
-      has: storage.hasItem,
-      del: storage.removeItem,
-      ...storage
-    };
-    return _kv;
+    return storage;
   }
   throw createError("Missing Cloudflare KV binding (KV)");
 }
@@ -8344,14 +8359,7 @@ function proxyHubKV(projectUrl, secretKey) {
       }
     })
   });
-  return {
-    keys: storage.getKeys,
-    get: storage.getItem,
-    set: storage.setItem,
-    has: storage.hasItem,
-    del: storage.removeItem,
-    ...storage
-  };
+  return storage;
 }
 
 const prisma$4 = new PrismaClient();
@@ -8369,7 +8377,7 @@ const stripe = new Stripe(useRuntimeConfig().STRIPE_SECRET_KEY);
 
 const hubHooks = createHooks();
 
-const _0rfBsfuKg9 = defineNitroPlugin$2(async () => {
+const _z7pQAmGYQs = defineNitroPlugin$2(async () => {
   await globalThis.__env__;
   await hubHooks.callHookParallel("bindings:ready");
 });
@@ -9362,7 +9370,7 @@ const json = defineTransformer({
     let parsed;
     if (typeof content === "string") {
       if (_id.endsWith("json5")) {
-        parsed = (await import('file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/.pnpm/json5@2.2.3/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
+        parsed = (await import('file:///Users/robertbeaney/Web%20Sites/dance-cloud/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
       } else if (_id.endsWith("json")) {
         parsed = destr$1(content);
       }
@@ -9918,7 +9926,7 @@ function serverQueryContent(event, query, ...pathParts) {
   return queryBuilder;
 }
 
-const _GOSye4lCMP = defineNitroPlugin$2(async (nitro) => {
+const _UTLSN8zs9O = defineNitroPlugin$2(async (nitro) => {
   const storage = useStorage();
   const unwatch = await storage.watch(async (event, key) => {
     if (key.startsWith("content:source")) {
@@ -9971,7 +9979,7 @@ function extractFromRuntimeConfig(config, envVariableName) {
 function defineNitroPlugin$1(def) {
   return def;
 }
-const _qY5WFLZwSy = defineNitroPlugin$1(() => {
+const _UNW8bnvrwj = defineNitroPlugin$1(() => {
   try {
     getServerOrigin();
   } catch (error) {
@@ -9979,6 +9987,93 @@ const _qY5WFLZwSy = defineNitroPlugin$1(() => {
       console.info(ERROR_MESSAGES.NO_ORIGIN);
     }
   }
+});
+
+var theme$1 = function theme(_ref) {
+  var dt = _ref.dt;
+  return "\n.p-dialog {\n    max-height: 90%;\n    transform: scale(1);\n    border-radius: ".concat(dt('dialog.border.radius'), ";\n    box-shadow: ").concat(dt('dialog.shadow'), ";\n    background: ").concat(dt('dialog.background'), ";\n    border: 1px solid ").concat(dt('dialog.border.color'), ";\n    color: ").concat(dt('dialog.color'), ";\n}\n\n.p-dialog-content {\n    overflow-y: auto;\n    padding: ").concat(dt('dialog.content.padding'), ";\n}\n\n.p-dialog-header {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    flex-shrink: 0;\n    padding: ").concat(dt('dialog.header.padding'), ";\n}\n\n.p-dialog-title {\n    font-weight: ").concat(dt('dialog.title.font.weight'), ";\n    font-size: ").concat(dt('dialog.title.font.size'), ";\n}\n\n.p-dialog-footer {\n    flex-shrink: 0;\n    padding: ").concat(dt('dialog.footer.padding'), ";\n    display: flex;\n    justify-content: flex-end;\n    gap: ").concat(dt('dialog.footer.gap'), ";\n}\n\n.p-dialog-header-actions {\n    display: flex;\n    align-items: center;\n    gap: ").concat(dt('dialog.header.gap'), ";\n}\n.p-dialog-enter-active {\n    transition: all 150ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.p-dialog-leave-active {\n    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.p-dialog-enter-from,\n.p-dialog-leave-to {\n    opacity: 0;\n    transform: scale(0.7);\n}\n\n.p-dialog-top .p-dialog,\n.p-dialog-bottom .p-dialog,\n.p-dialog-left .p-dialog,\n.p-dialog-right .p-dialog,\n.p-dialog-topleft .p-dialog,\n.p-dialog-topright .p-dialog,\n.p-dialog-bottomleft .p-dialog,\n.p-dialog-bottomright .p-dialog {\n    margin: 0.75rem;\n    transform: translate3d(0px, 0px, 0px);\n}\n\n.p-dialog-top .p-dialog-enter-active,\n.p-dialog-top .p-dialog-leave-active,\n.p-dialog-bottom .p-dialog-enter-active,\n.p-dialog-bottom .p-dialog-leave-active,\n.p-dialog-left .p-dialog-enter-active,\n.p-dialog-left .p-dialog-leave-active,\n.p-dialog-right .p-dialog-enter-active,\n.p-dialog-right .p-dialog-leave-active,\n.p-dialog-topleft .p-dialog-enter-active,\n.p-dialog-topleft .p-dialog-leave-active,\n.p-dialog-topright .p-dialog-enter-active,\n.p-dialog-topright .p-dialog-leave-active,\n.p-dialog-bottomleft .p-dialog-enter-active,\n.p-dialog-bottomleft .p-dialog-leave-active,\n.p-dialog-bottomright .p-dialog-enter-active,\n.p-dialog-bottomright .p-dialog-leave-active {\n    transition: all 0.3s ease-out;\n}\n\n.p-dialog-top .p-dialog-enter-from,\n.p-dialog-top .p-dialog-leave-to {\n    transform: translate3d(0px, -100%, 0px);\n}\n\n.p-dialog-bottom .p-dialog-enter-from,\n.p-dialog-bottom .p-dialog-leave-to {\n    transform: translate3d(0px, 100%, 0px);\n}\n\n.p-dialog-left .p-dialog-enter-from,\n.p-dialog-left .p-dialog-leave-to,\n.p-dialog-topleft .p-dialog-enter-from,\n.p-dialog-topleft .p-dialog-leave-to,\n.p-dialog-bottomleft .p-dialog-enter-from,\n.p-dialog-bottomleft .p-dialog-leave-to {\n    transform: translate3d(-100%, 0px, 0px);\n}\n\n.p-dialog-right .p-dialog-enter-from,\n.p-dialog-right .p-dialog-leave-to,\n.p-dialog-topright .p-dialog-enter-from,\n.p-dialog-topright .p-dialog-leave-to,\n.p-dialog-bottomright .p-dialog-enter-from,\n.p-dialog-bottomright .p-dialog-leave-to {\n    transform: translate3d(100%, 0px, 0px);\n}\n\n.p-dialog-maximized {\n    width: 100vw !important;\n    height: 100vh !important;\n    top: 0px !important;\n    left: 0px !important;\n    max-height: 100%;\n    height: 100%;\n    border-radius: 0;\n}\n\n.p-dialog-maximized .p-dialog-content {\n    flex-grow: 1;\n}\n");
+};
+
+/* Position */
+var inlineStyles = {
+  mask: function mask(_ref2) {
+    var position = _ref2.position,
+      modal = _ref2.modal;
+    return {
+      position: 'fixed',
+      height: '100%',
+      width: '100%',
+      left: 0,
+      top: 0,
+      display: 'flex',
+      justifyContent: position === 'left' || position === 'topleft' || position === 'bottomleft' ? 'flex-start' : position === 'right' || position === 'topright' || position === 'bottomright' ? 'flex-end' : 'center',
+      alignItems: position === 'top' || position === 'topleft' || position === 'topright' ? 'flex-start' : position === 'bottom' || position === 'bottomleft' || position === 'bottomright' ? 'flex-end' : 'center',
+      pointerEvents: modal ? 'auto' : 'none'
+    };
+  },
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    pointerEvents: 'auto'
+  }
+};
+var classes$1 = {
+  mask: function mask(_ref3) {
+    var props = _ref3.props;
+    var positions = ['left', 'right', 'top', 'topleft', 'topright', 'bottom', 'bottomleft', 'bottomright'];
+    var pos = positions.find(function (item) {
+      return item === props.position;
+    });
+    return ['p-dialog-mask', {
+      'p-overlay-mask p-overlay-mask-enter': props.modal
+    }, pos ? "p-dialog-".concat(pos) : ''];
+  },
+  root: function root(_ref4) {
+    var props = _ref4.props,
+      instance = _ref4.instance;
+    return ['p-dialog p-component', {
+      'p-dialog-maximized': props.maximizable && instance.maximized
+    }];
+  },
+  header: 'p-dialog-header',
+  title: 'p-dialog-title',
+  headerActions: 'p-dialog-header-actions',
+  pcMaximizeButton: 'p-dialog-maximize-button',
+  pcCloseButton: 'p-dialog-close-button',
+  content: 'p-dialog-content',
+  footer: 'p-dialog-footer'
+};
+var DialogStyle = BaseStyle.extend({
+  name: 'dialog',
+  theme: theme$1,
+  classes: classes$1,
+  inlineStyles: inlineStyles
+});
+
+var theme = function theme(_ref) {
+  var dt = _ref.dt;
+  return "\n.p-tag {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    background: ".concat(dt('tag.primary.background'), ";\n    color: ").concat(dt('tag.primary.color'), ";\n    font-size: ").concat(dt('tag.font.size'), ";\n    font-weight: ").concat(dt('tag.font.weight'), ";\n    padding: ").concat(dt('tag.padding'), ";\n    border-radius: ").concat(dt('tag.border.radius'), ";\n    gap: ").concat(dt('tag.gap'), ";\n}\n\n.p-tag-icon {\n    font-size: ").concat(dt('tag.icon.size'), ";\n    width: ").concat(dt('tag.icon.size'), ";\n    height:").concat(dt('tag.icon.size'), ";\n}\n\n.p-tag-rounded {\n    border-radius: ").concat(dt('tag.rounded.border.radius'), ";\n}\n\n.p-tag-success {\n    background: ").concat(dt('tag.success.background'), ";\n    color: ").concat(dt('tag.success.color'), ";\n}\n\n.p-tag-info {\n    background: ").concat(dt('tag.info.background'), ";\n    color: ").concat(dt('tag.info.color'), ";\n}\n\n.p-tag-warn {\n    background: ").concat(dt('tag.warn.background'), ";\n    color: ").concat(dt('tag.warn.color'), ";\n}\n\n.p-tag-danger {\n    background: ").concat(dt('tag.danger.background'), ";\n    color: ").concat(dt('tag.danger.color'), ";\n}\n\n.p-tag-secondary {\n    background: ").concat(dt('tag.secondary.background'), ";\n    color: ").concat(dt('tag.secondary.color'), ";\n}\n\n.p-tag-contrast {\n    background: ").concat(dt('tag.contrast.background'), ";\n    color: ").concat(dt('tag.contrast.color'), ";\n}\n");
+};
+var classes = {
+  root: function root(_ref2) {
+    var props = _ref2.props;
+    return ['p-tag p-component', {
+      'p-tag-info': props.severity === 'info',
+      'p-tag-success': props.severity === 'success',
+      'p-tag-warn': props.severity === 'warn',
+      'p-tag-danger': props.severity === 'danger',
+      'p-tag-secondary': props.severity === 'secondary',
+      'p-tag-contrast': props.severity === 'contrast',
+      'p-tag-rounded': props.rounded
+    }];
+  },
+  icon: 'p-tag-icon',
+  label: 'p-tag-label'
+};
+var TagStyle = BaseStyle.extend({
+  name: 'tag',
+  theme: theme,
+  classes: classes
 });
 
 const runtimeConfig$2 = useRuntimeConfig();
@@ -9991,18 +10086,18 @@ const styleProps = {
 };
 const styles$2 = [
   ,
-  BaseStyle && BaseStyle.getStyleSheet ? BaseStyle.getStyleSheet(undefined, styleProps) : ''
+  BaseStyle && BaseStyle.getStyleSheet ? BaseStyle.getStyleSheet(undefined, styleProps) : '',DialogStyle && DialogStyle.getStyleSheet ? DialogStyle.getStyleSheet(undefined, styleProps) : '',TagStyle && TagStyle.getStyleSheet ? TagStyle.getStyleSheet(undefined, styleProps) : ''
 ].join('');
 
 Theme.setTheme(options?.theme);
 
 const themes = [
     BaseStyle && BaseStyle.getCommonThemeStyleSheet ? BaseStyle.getCommonThemeStyleSheet(undefined, styleProps) : '',
-    BaseStyle && BaseStyle.getThemeStyleSheet ? BaseStyle.getThemeStyleSheet(undefined, styleProps) : ''
+    BaseStyle && BaseStyle.getThemeStyleSheet ? BaseStyle.getThemeStyleSheet(undefined, styleProps) : '',DialogStyle && DialogStyle.getThemeStyleSheet ? DialogStyle.getThemeStyleSheet(undefined, styleProps) : '',TagStyle && TagStyle.getThemeStyleSheet ? TagStyle.getThemeStyleSheet(undefined, styleProps) : ''
 ].join('');
 
 const defineNitroPlugin = (def) => def;
-const _vq8Dsw9hts = defineNitroPlugin(async (nitroApp) => {
+const _gOg0TeefBZ = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", (html) => {
     html.head.unshift(stylesToTop);
     html.head.push(styles$2);
@@ -10018,7 +10113,7 @@ const _proxy = _getPlatformProxy().catch((error) => {
   return proxy;
 });
 globalThis.__env__ = _proxy.then((proxy) => proxy.env);
-const _NW3GuMI1wN = (function(nitroApp) {
+const _Jazp33ePlf = (function(nitroApp) {
   nitroApp.hooks.hook("request", async (event) => {
     const proxy = await _proxy;
     event.context.cf = proxy.cf;
@@ -10102,13 +10197,13 @@ class _CacheStub {
 }
 
 const plugins = [
-  _E5JK1gA1Nq,
-_jOjPXCm0uP,
-_0rfBsfuKg9,
-_GOSye4lCMP,
-_qY5WFLZwSy,
-_vq8Dsw9hts,
-_NW3GuMI1wN
+  _n2qJibMKoA,
+_b14YKeV90v,
+_z7pQAmGYQs,
+_UTLSN8zs9O,
+_UNW8bnvrwj,
+_gOg0TeefBZ,
+_Jazp33ePlf
 ];
 
 const errorHandler = (async function errorhandler(error, event) {
@@ -10130,7 +10225,7 @@ const errorHandler = (async function errorhandler(error, event) {
       error.fatal && "[fatal]",
       Number(errorObject.statusCode) !== 200 && `[${errorObject.statusCode}]`
     ].filter(Boolean).join(" ");
-    console.error(tags, errorObject.message + "\n" + stack.map((l) => "  " + l.text).join("  \n"));
+    console.error(tags, (error.message || error.toString() || "internal server error") + "\n" + stack.map((l) => "  " + l.text).join("  \n"));
   }
   if (event.handled) {
     return;
@@ -10179,7 +10274,7 @@ const _Y01CXN = eventHandler(async (event) => {
   }
 });
 
-const _Jl3NB9 = eventHandler((event) => {
+const _ejfEuA = eventHandler((event) => {
   handleCors(event, {
     methods: "*",
     origin: [
@@ -10269,7 +10364,7 @@ const getContentQuery = (event) => {
   return query;
 };
 
-const _et69qB = defineEventHandler(async (event) => {
+const _kj3GUx = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   const { advanceQuery } = useRuntimeConfig().public.content.experimental;
   if (query.first) {
@@ -10298,7 +10393,7 @@ const _et69qB = defineEventHandler(async (event) => {
   return serverQueryContent(event, query).find();
 });
 
-const _zflliU = defineEventHandler(async (event) => {
+const _0mhTAF = defineEventHandler(async (event) => {
   const { content } = useRuntimeConfig();
   const now = Date.now();
   const contents = await serverQueryContent(event).find();
@@ -10408,7 +10503,7 @@ function isObject(obj) {
   return Object.prototype.toString.call(obj) === "[object Object]";
 }
 
-const _4zbZk9 = defineEventHandler(async (event) => {
+const _izs7Rk = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (!isPreview(event) && Object.keys(query).length === 0) {
     const cache = await cacheStorage().getItem("content-navigation.json");
@@ -10763,33 +10858,33 @@ const _lazy_FCslW2 = () => Promise.resolve().then(function () { return index_put
 const _lazy_Jp6WYo = () => Promise.resolve().then(function () { return createCheckoutSession$1; });
 const _lazy_u3kKaB = () => Promise.resolve().then(function () { return createPortalSession$1; });
 const _lazy_sB4I9J = () => Promise.resolve().then(function () { return webhook$1; });
-const _lazy_6Y6PP9 = () => Promise.resolve().then(function () { return ____feature_$1; });
-const _lazy_u4AdK7 = () => Promise.resolve().then(function () { return index_head$1; });
-const _lazy_RHvDbC = () => Promise.resolve().then(function () { return manifest_get$1; });
-const _lazy_q3pECv = () => Promise.resolve().then(function () { return openapi_get$1; });
-const _lazy_V92IPs = () => Promise.resolve().then(function () { return ____pathname__delete$1; });
-const _lazy_wcm1RX = () => Promise.resolve().then(function () { return ____pathname__get$3; });
-const _lazy_5G8zbo = () => Promise.resolve().then(function () { return ____pathname__put$1; });
-const _lazy_pUvIh5 = () => Promise.resolve().then(function () { return deleteFolder_post$1; });
-const _lazy_ih75gP = () => Promise.resolve().then(function () { return delete_post$1; });
-const _lazy_Zjxw8G = () => Promise.resolve().then(function () { return ____pathname__get$1; });
-const _lazy_aY4U6B = () => Promise.resolve().then(function () { return index_get$3; });
-const _lazy_6NlhAj = () => Promise.resolve().then(function () { return index_post$1; });
-const _lazy_HxfANb = () => Promise.resolve().then(function () { return ____pathname_$1; });
-const _lazy_5QwDhN = () => Promise.resolve().then(function () { return ____key__delete$1; });
-const _lazy_7oQjky = () => Promise.resolve().then(function () { return ____key__get$1; });
-const _lazy_eKvPdT = () => Promise.resolve().then(function () { return ____key__options$1; });
-const _lazy_MnYAwh = () => Promise.resolve().then(function () { return batchDelete_options$1; });
-const _lazy_BDUfZr = () => Promise.resolve().then(function () { return batchDelete_post$1; });
-const _lazy_1kDbsY = () => Promise.resolve().then(function () { return ____base__delete$1; });
-const _lazy_0lZVcg = () => Promise.resolve().then(function () { return ____base__options$1; });
-const _lazy_YFP3zv = () => Promise.resolve().then(function () { return index_get$1; });
-const _lazy_ldiTce = () => Promise.resolve().then(function () { return _command__post$1; });
-const _lazy_yXWirJ = () => Promise.resolve().then(function () { return query_options$1; });
-const _lazy_XyTQIq = () => Promise.resolve().then(function () { return query_post$1; });
-const _lazy_7fyvqD = () => Promise.resolve().then(function () { return ____path_$1; });
+const _lazy_stl9D2 = () => Promise.resolve().then(function () { return ____feature_$1; });
+const _lazy_rXtSG4 = () => Promise.resolve().then(function () { return index_head$1; });
+const _lazy_fFTKjc = () => Promise.resolve().then(function () { return manifest_get$1; });
+const _lazy_UTOBh3 = () => Promise.resolve().then(function () { return openapi_get$1; });
+const _lazy_7Yzs0m = () => Promise.resolve().then(function () { return ____pathname__delete$1; });
+const _lazy_QLQP8e = () => Promise.resolve().then(function () { return ____pathname__get$3; });
+const _lazy_0heqL2 = () => Promise.resolve().then(function () { return ____pathname__put$1; });
+const _lazy_W8wMxK = () => Promise.resolve().then(function () { return deleteFolder_post$1; });
+const _lazy_uPKgdQ = () => Promise.resolve().then(function () { return delete_post$1; });
+const _lazy_SUeFjS = () => Promise.resolve().then(function () { return ____pathname__get$1; });
+const _lazy_n1KiIu = () => Promise.resolve().then(function () { return index_get$3; });
+const _lazy_Nnhf7u = () => Promise.resolve().then(function () { return index_post$1; });
+const _lazy_ePVTE7 = () => Promise.resolve().then(function () { return ____pathname_$1; });
+const _lazy_G5K18P = () => Promise.resolve().then(function () { return ____key__delete$1; });
+const _lazy_kMF46V = () => Promise.resolve().then(function () { return ____key__get$1; });
+const _lazy_MyZrhq = () => Promise.resolve().then(function () { return ____key__options$1; });
+const _lazy_EHQA7g = () => Promise.resolve().then(function () { return batchDelete_options$1; });
+const _lazy_3YYJhn = () => Promise.resolve().then(function () { return batchDelete_post$1; });
+const _lazy_ifP231 = () => Promise.resolve().then(function () { return ____base__delete$1; });
+const _lazy_wIGS2Q = () => Promise.resolve().then(function () { return ____base__options$1; });
+const _lazy_VzX9Cy = () => Promise.resolve().then(function () { return index_get$1; });
+const _lazy_Ix03V2 = () => Promise.resolve().then(function () { return _command__post$1; });
+const _lazy_HMzEBu = () => Promise.resolve().then(function () { return query_options$1; });
+const _lazy_UT7xJR = () => Promise.resolve().then(function () { return query_post$1; });
+const _lazy_khR70g = () => Promise.resolve().then(function () { return ____path_$1; });
 const _lazy_7WM2tt = () => Promise.resolve().then(function () { return _pathname__get$1; });
-const _lazy_TMQrhY = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_JFHQhC = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
   { route: '', handler: _Y01CXN, lazy: false, middleware: true, method: undefined },
@@ -10809,46 +10904,46 @@ const handlers = [
   { route: '/api/stripe/create-checkout-session', handler: _lazy_Jp6WYo, lazy: true, middleware: false, method: undefined },
   { route: '/api/stripe/create-portal-session', handler: _lazy_u3kKaB, lazy: true, middleware: false, method: undefined },
   { route: '/api/stripe/webhook', handler: _lazy_sB4I9J, lazy: true, middleware: false, method: undefined },
-  { route: '/api/_hub/**:feature', handler: _lazy_6Y6PP9, lazy: true, middleware: false, method: undefined },
-  { route: '/api/_hub', handler: _lazy_u4AdK7, lazy: true, middleware: false, method: "head" },
-  { route: '/api/_hub/manifest', handler: _lazy_RHvDbC, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/openapi', handler: _lazy_q3pECv, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/blob/**:pathname', handler: _lazy_V92IPs, lazy: true, middleware: false, method: "delete" },
-  { route: '/api/_hub/blob/**:pathname', handler: _lazy_wcm1RX, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/blob/**:pathname', handler: _lazy_5G8zbo, lazy: true, middleware: false, method: "put" },
-  { route: '/api/_hub/blob/delete-folder', handler: _lazy_pUvIh5, lazy: true, middleware: false, method: "post" },
-  { route: '/api/_hub/blob/delete', handler: _lazy_ih75gP, lazy: true, middleware: false, method: "post" },
-  { route: '/api/_hub/blob/head/**:pathname', handler: _lazy_Zjxw8G, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/blob', handler: _lazy_aY4U6B, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/blob', handler: _lazy_6NlhAj, lazy: true, middleware: false, method: "post" },
-  { route: '/api/_hub/blob/multipart/:action/**:pathname', handler: _lazy_HxfANb, lazy: true, middleware: false, method: undefined },
-  { route: '/api/_hub/cache/**:key', handler: _lazy_5QwDhN, lazy: true, middleware: false, method: "delete" },
-  { route: '/api/_hub/cache/**:key', handler: _lazy_7oQjky, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/cache/**:key', handler: _lazy_eKvPdT, lazy: true, middleware: false, method: "options" },
-  { route: '/api/_hub/cache/batch-delete', handler: _lazy_MnYAwh, lazy: true, middleware: false, method: "options" },
-  { route: '/api/_hub/cache/batch-delete', handler: _lazy_BDUfZr, lazy: true, middleware: false, method: "post" },
-  { route: '/api/_hub/cache/clear/**:base', handler: _lazy_1kDbsY, lazy: true, middleware: false, method: "delete" },
-  { route: '/api/_hub/cache/clear/**:base', handler: _lazy_0lZVcg, lazy: true, middleware: false, method: "options" },
-  { route: '/api/_hub/cache', handler: _lazy_YFP3zv, lazy: true, middleware: false, method: "get" },
-  { route: '/api/_hub/database/:command', handler: _lazy_ldiTce, lazy: true, middleware: false, method: "post" },
-  { route: '/api/_hub/database/query', handler: _lazy_yXWirJ, lazy: true, middleware: false, method: "options" },
-  { route: '/api/_hub/database/query', handler: _lazy_XyTQIq, lazy: true, middleware: false, method: "post" },
-  { route: '/api/_hub/kv/**:path', handler: _lazy_7fyvqD, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_hub/**:feature', handler: _lazy_stl9D2, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_hub', handler: _lazy_rXtSG4, lazy: true, middleware: false, method: "head" },
+  { route: '/api/_hub/manifest', handler: _lazy_fFTKjc, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/openapi', handler: _lazy_UTOBh3, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/blob/**:pathname', handler: _lazy_7Yzs0m, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/_hub/blob/**:pathname', handler: _lazy_QLQP8e, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/blob/**:pathname', handler: _lazy_0heqL2, lazy: true, middleware: false, method: "put" },
+  { route: '/api/_hub/blob/delete-folder', handler: _lazy_W8wMxK, lazy: true, middleware: false, method: "post" },
+  { route: '/api/_hub/blob/delete', handler: _lazy_uPKgdQ, lazy: true, middleware: false, method: "post" },
+  { route: '/api/_hub/blob/head/**:pathname', handler: _lazy_SUeFjS, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/blob', handler: _lazy_n1KiIu, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/blob', handler: _lazy_Nnhf7u, lazy: true, middleware: false, method: "post" },
+  { route: '/api/_hub/blob/multipart/:action/**:pathname', handler: _lazy_ePVTE7, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_hub/cache/**:key', handler: _lazy_G5K18P, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/_hub/cache/**:key', handler: _lazy_kMF46V, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/cache/**:key', handler: _lazy_MyZrhq, lazy: true, middleware: false, method: "options" },
+  { route: '/api/_hub/cache/batch-delete', handler: _lazy_EHQA7g, lazy: true, middleware: false, method: "options" },
+  { route: '/api/_hub/cache/batch-delete', handler: _lazy_3YYJhn, lazy: true, middleware: false, method: "post" },
+  { route: '/api/_hub/cache/clear/**:base', handler: _lazy_ifP231, lazy: true, middleware: false, method: "delete" },
+  { route: '/api/_hub/cache/clear/**:base', handler: _lazy_wIGS2Q, lazy: true, middleware: false, method: "options" },
+  { route: '/api/_hub/cache', handler: _lazy_VzX9Cy, lazy: true, middleware: false, method: "get" },
+  { route: '/api/_hub/database/:command', handler: _lazy_Ix03V2, lazy: true, middleware: false, method: "post" },
+  { route: '/api/_hub/database/query', handler: _lazy_HMzEBu, lazy: true, middleware: false, method: "options" },
+  { route: '/api/_hub/database/query', handler: _lazy_UT7xJR, lazy: true, middleware: false, method: "post" },
+  { route: '/api/_hub/kv/**:path', handler: _lazy_khR70g, lazy: true, middleware: false, method: undefined },
   { route: '/images/:pathname', handler: _lazy_7WM2tt, lazy: true, middleware: false, method: "get" },
-  { route: '/__nuxt_error', handler: _lazy_TMQrhY, lazy: true, middleware: false, method: undefined },
-  { route: '/api/_hub', handler: _Jl3NB9, lazy: false, middleware: true, method: undefined },
-  { route: '/api/_content/query/:qid/**:params', handler: _et69qB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query/:qid', handler: _et69qB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query', handler: _et69qB, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.json', handler: _zflliU, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid/**:params', handler: _4zbZk9, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid', handler: _4zbZk9, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation', handler: _4zbZk9, lazy: false, middleware: false, method: "get" },
+  { route: '/__nuxt_error', handler: _lazy_JFHQhC, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_hub', handler: _ejfEuA, lazy: false, middleware: true, method: undefined },
+  { route: '/api/_content/query/:qid/**:params', handler: _kj3GUx, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query/:qid', handler: _kj3GUx, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query', handler: _kj3GUx, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/cache.json', handler: _0mhTAF, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid/**:params', handler: _izs7Rk, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid', handler: _izs7Rk, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation', handler: _izs7Rk, lazy: false, middleware: false, method: "get" },
   { route: '/_nitro/openapi.json', handler: _gGTmeA, lazy: false, middleware: false, method: undefined },
   { route: '/_nitro/scalar', handler: _JxEq2m, lazy: false, middleware: false, method: undefined },
   { route: '/_nitro/swagger', handler: _a3haAa, lazy: false, middleware: false, method: undefined },
-  { route: '/_scripts/**', handler: _lazy_TMQrhY, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_TMQrhY, lazy: true, middleware: false, method: undefined }
+  { route: '/_scripts/**', handler: _lazy_JFHQhC, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_JFHQhC, lazy: true, middleware: false, method: undefined }
 ];
 
 const handlersMeta = [
@@ -11155,6 +11250,13 @@ function createNitroApp() {
     }
   }
   h3App.use(config.app.baseURL, router.handler);
+  {
+    const _handler = h3App.handler;
+    h3App.handler = (event) => {
+      const ctx = { event };
+      return nitroAsyncContext.callAsync(ctx, () => _handler(event));
+    };
+  }
   const app = {
     hooks,
     h3App,
@@ -11316,7 +11418,7 @@ const r2Patch = /*#__PURE__*/Object.freeze({
 const _messages = { "appName": "Nuxt", "version": "", "statusCode": 500, "statusMessage": "Server error", "description": "An error occurred in the application and the page could not be served. If you are the application owner, check your server logs for details.", "stack": "" };
 const template$1 = (messages) => {
   messages = { ..._messages, ...messages };
-  return '<!DOCTYPE html><html lang="en"><head><title>' + messages.statusCode + " - " + messages.statusMessage + " | " + messages.appName + `</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,minimum-scale=1" name="viewport"><style>.spotlight{background:linear-gradient(45deg, #00DC82 0%, #36E4DA 50%, #0047E1 100%);opacity:0.8;filter:blur(30vh);height:60vh;bottom:-40vh}*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:var(--un-default-border-color, #e5e7eb)}:before,:after{--un-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}h1{font-size:inherit;font-weight:inherit}pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}h1,p,pre{margin:0}*,:before,:after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 rgb(0 0 0 / 0);--un-ring-shadow:0 0 rgb(0 0 0 / 0);--un-shadow-inset: ;--un-shadow:0 0 rgb(0 0 0 / 0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgb(147 197 253 / .5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.z-10{z-index:10}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.h-auto{height:auto}.min-h-screen{min-height:100vh}.flex{display:flex}.flex-1{flex:1 1 0%}.flex-col{flex-direction:column}.overflow-y-auto{overflow-y:auto}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.bg-black\\/5{background-color:#0000000d}.bg-white{--un-bg-opacity:1;background-color:rgb(255 255 255 / var(--un-bg-opacity))}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pt-14{padding-top:3.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-black{--un-text-opacity:1;color:rgb(0 0 0 / var(--un-text-opacity))}.font-light{font-weight:300}.font-medium{font-weight:500}.leading-tight{line-height:1.25}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (prefers-color-scheme: dark){.dark\\:bg-black{--un-bg-opacity:1;background-color:rgb(0 0 0 / var(--un-bg-opacity))}.dark\\:bg-white\\/10{background-color:#ffffff1a}.dark\\:text-white{--un-text-opacity:1;color:rgb(255 255 255 / var(--un-text-opacity))}}@media (min-width: 640px){.sm\\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\\:text-8xl{font-size:6rem;line-height:1}}</style><script>(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();<\/script></head><body class="font-sans antialiased bg-white px-10 pt-14 dark:bg-black text-black dark:text-white min-h-screen flex flex-col"><div class="fixed left-0 right-0 spotlight"></div><h1 class="text-6xl sm:text-8xl font-medium mb-6">` + messages.statusCode + '</h1><p class="text-xl sm:text-2xl font-light mb-8 leading-tight">' + messages.description + '</p><div class="bg-white rounded-t-md bg-black/5 dark:bg-white/10 flex-1 overflow-y-auto h-auto"><pre class="text-xl font-light leading-tight z-10 p-8">' + messages.stack + "</pre></div></body></html>";
+  return '<!DOCTYPE html><html lang="en"><head><title>' + messages.statusCode + " - " + messages.statusMessage + " | " + messages.appName + `</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0" name="viewport"><style>.spotlight{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);bottom:-40vh;filter:blur(30vh);height:60vh;opacity:.8}*,:after,:before{border-color:var(--un-default-border-color,#e5e7eb);border-style:solid;border-width:0;box-sizing:border-box}:after,:before{--un-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-moz-tab-size:4;tab-size:4;-webkit-tap-highlight-color:transparent}body{line-height:inherit;margin:0}h1{font-size:inherit;font-weight:inherit}pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-size:1em;font-variation-settings:normal}h1,p,pre{margin:0}*,:after,:before{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-pan-x: ;--un-pan-y: ;--un-pinch-zoom: ;--un-scroll-snap-strictness:proximity;--un-ordinal: ;--un-slashed-zero: ;--un-numeric-figure: ;--un-numeric-spacing: ;--un-numeric-fraction: ;--un-border-spacing-x:0;--un-border-spacing-y:0;--un-ring-offset-shadow:0 0 transparent;--un-ring-shadow:0 0 transparent;--un-shadow-inset: ;--un-shadow:0 0 transparent;--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,.5);--un-blur: ;--un-brightness: ;--un-contrast: ;--un-drop-shadow: ;--un-grayscale: ;--un-hue-rotate: ;--un-invert: ;--un-saturate: ;--un-sepia: ;--un-backdrop-blur: ;--un-backdrop-brightness: ;--un-backdrop-contrast: ;--un-backdrop-grayscale: ;--un-backdrop-hue-rotate: ;--un-backdrop-invert: ;--un-backdrop-opacity: ;--un-backdrop-saturate: ;--un-backdrop-sepia: }.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.z-10{z-index:10}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.h-auto{height:auto}.min-h-screen{min-height:100vh}.flex{display:flex}.flex-1{flex:1 1 0%}.flex-col{flex-direction:column}.overflow-y-auto{overflow-y:auto}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.bg-black\\/5{background-color:#0000000d}.bg-white{--un-bg-opacity:1;background-color:rgb(255 255 255/var(--un-bg-opacity))}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pt-14{padding-top:3.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-black{--un-text-opacity:1;color:rgb(0 0 0/var(--un-text-opacity))}.font-light{font-weight:300}.font-medium{font-weight:500}.leading-tight{line-height:1.25}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (prefers-color-scheme:dark){.dark\\:bg-black{--un-bg-opacity:1;background-color:rgb(0 0 0/var(--un-bg-opacity))}.dark\\:bg-white\\/10{background-color:#ffffff1a}.dark\\:text-white{--un-text-opacity:1;color:rgb(255 255 255/var(--un-text-opacity))}}@media (min-width:640px){.sm\\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\\:text-8xl{font-size:6rem;line-height:1}}</style><script>!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver((e=>{for(const o of e)if("childList"===o.type)for(const e of o.addedNodes)"LINK"===e.tagName&&"modulepreload"===e.rel&&r(e)})).observe(document,{childList:!0,subtree:!0})}function r(e){if(e.ep)return;e.ep=!0;const r=function(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),"use-credentials"===e.crossOrigin?r.credentials="include":"anonymous"===e.crossOrigin?r.credentials="omit":r.credentials="same-origin",r}(e);fetch(e.href,r)}}();<\/script></head><body class="antialiased bg-white dark:bg-black dark:text-white flex flex-col font-sans min-h-screen pt-14 px-10 text-black"><div class="fixed left-0 right-0 spotlight"></div><h1 class="font-medium mb-6 sm:text-8xl text-6xl">` + messages.statusCode + '</h1><p class="font-light leading-tight mb-8 sm:text-2xl text-xl">' + messages.description + '</p><div class="bg-black/5 bg-white dark:bg-white/10 flex-1 h-auto overflow-y-auto rounded-t-md"><pre class="font-light leading-tight p-8 text-xl z-10">' + messages.stack + "</pre></div></body></html>";
 };
 
 const errorDev = /*#__PURE__*/Object.freeze({
@@ -11801,7 +11903,9 @@ const _____ = NuxtAuthHandler({
             ...session.user,
             isSubscribed: accounts[0].is_subscribed,
             plan: accounts[0].plan,
-            test: accounts[0].createdAt
+            createdAt: accounts[0].createdAt,
+            userId: accounts[0].userId,
+            email: accounts[0].email
           }
         };
       }
@@ -11811,7 +11915,8 @@ const _____ = NuxtAuthHandler({
           ...session.user,
           isSubscribed: false,
           plan: "tier-free",
-          test: "testing-default"
+          createdAt: "testing-default",
+          userId: "none"
         }
       };
     }
@@ -11887,11 +11992,11 @@ const index_get$7 = /*#__PURE__*/Object.freeze({
 });
 
 const index_post$2 = eventHandler(async (event) => {
-  const { text, post_id } = await readBody(event);
+  const { text, post_id, user_id } = await readBody(event);
   const db = hubDatabase();
   await db.prepare(
-    "INSERT INTO messages (text, created_at, post_id) VALUES (?1, ?2, ?3)"
-  ).bind(text, Date.now(), post_id).run();
+    "INSERT INTO messages (text, created_at, post_id, user_id) VALUES (?1, ?2, ?3, ?4)"
+  ).bind(text, Date.now(), post_id, user_id).run();
   return {};
 });
 
@@ -12244,7 +12349,7 @@ async function handleProxyError(err) {
 
 const manifest_get = eventHandler(async (event) => {
   await requireNuxtHubAuthorization();
-  const { version, cache, ai, analytics, blob, kv, database } = useRuntimeConfig().hub;
+  const { version, cache, ai, analytics, browser, blob, kv, database } = useRuntimeConfig().hub;
   const [aiCheck, dbCheck, kvCheck, blobCheck] = await Promise.all([
     falseIfFail(() => ai && hubAI().run("@cf/baai/bge-small-en-v1.5", { text: "check" })),
     falseIfFail(() => database && hubDatabase().exec("PRAGMA table_list")),
@@ -12261,6 +12366,7 @@ const manifest_get = eventHandler(async (event) => {
     features: {
       ai: Boolean(aiCheck),
       analytics,
+      browser,
       cache
     }
   };
@@ -12358,6 +12464,7 @@ const ____pathname__put = eventHandler(async (event) => {
       options.customMetadata = {};
     }
   }
+  options.addRandomSuffix = options.addRandomSuffix === "true";
   const stream = getRequestWebStream(event);
   const body = await streamToArrayBuffer(stream, Number(contentLength));
   return hubBlob().put(pathname, body, options);
@@ -12733,7 +12840,7 @@ function resolveUnref(r) {
   return typeof r === "function" ? r() : unref(r);
 }
 function resolveUnrefHeadInput(ref) {
-  if (ref instanceof Promise)
+  if (ref instanceof Promise || ref instanceof Date || ref instanceof RegExp)
     return ref;
   const root = resolveUnref(ref);
   if (!ref || !root)
@@ -12833,9 +12940,7 @@ const getSPARenderer = lazyCachedFunction(async () => {
   const renderToString = (ssrContext) => {
     const config = useRuntimeConfig(ssrContext.event);
     ssrContext.modules = ssrContext.modules || /* @__PURE__ */ new Set();
-    ssrContext.payload = {
-      serverRendered: false
-    };
+    ssrContext.payload.serverRendered = false;
     ssrContext.config = {
       public: config.public,
       app: config.app
@@ -12911,7 +13016,7 @@ const renderer = defineRenderHandler(async (event) => {
     nuxt: void 0,
     /* NuxtApp */
     payload: ssrError ? { error: ssrError } : {},
-    _payloadReducers: {},
+    _payloadReducers: /* @__PURE__ */ Object.create(null),
     modules: /* @__PURE__ */ new Set(),
     islandContext
   };

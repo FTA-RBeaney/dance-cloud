@@ -1,12 +1,214 @@
 import { NuxtModule, RuntimeConfig } from '@nuxt/schema'
 declare module '@nuxt/schema' {
+  interface NuxtOptions {
+    /**
+     * Configuration for `@nuxthub/core`
+     */
+    ["hub"]: typeof import("@nuxthub/core").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/eslint`
+     */
+    ["eslint"]: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@primevue/nuxt-module`
+     */
+    ["primevue"]: typeof import("@primevue/nuxt-module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     */
+    ["tailwindcss"]: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/mdc`
+     */
+    ["mdc"]: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/content`
+     */
+    ["content"]: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/scripts`
+     */
+    ["scripts"]: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@sidebase/nuxt-auth`
+     */
+    ["auth"]: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@prisma/nuxt`
+     */
+    ["prisma"]: typeof import("@prisma/nuxt").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/devtools`
+     */
+    ["devtools"]: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     */
+    ["telemetry"]: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? O : Record<string, any>
+  }
   interface NuxtConfig {
-    ["hub"]?: typeof import("@nuxthub/core").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["eslint"]?: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["primevue"]?: typeof import("@primevue/nuxt-module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["mdc"]?: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["scripts"]?: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["auth"]?: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,  modules?: (undefined | null | false | NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@nuxthub/core", Exclude<NuxtConfig["hub"], boolean>] | ["@nuxt/eslint", Exclude<NuxtConfig["eslint"], boolean>] | ["@primevue/nuxt-module", Exclude<NuxtConfig["primevue"], boolean>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/mdc", Exclude<NuxtConfig["mdc"], boolean>] | ["@nuxt/content", Exclude<NuxtConfig["content"], boolean>] | ["@nuxt/scripts", Exclude<NuxtConfig["scripts"], boolean>] | ["@sidebase/nuxt-auth", Exclude<NuxtConfig["auth"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    /**
+     * Configuration for `@nuxthub/core`
+     */
+    ["hub"]?: typeof import("@nuxthub/core").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/eslint`
+     */
+    ["eslint"]?: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@primevue/nuxt-module`
+     */
+    ["primevue"]?: typeof import("@primevue/nuxt-module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     */
+    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/mdc`
+     */
+    ["mdc"]?: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/content`
+     */
+    ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/scripts`
+     */
+    ["scripts"]?: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@sidebase/nuxt-auth`
+     */
+    ["auth"]?: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@prisma/nuxt`
+     */
+    ["prisma"]?: typeof import("@prisma/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/devtools`
+     */
+    ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     */
+    ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxthub/core", Exclude<NuxtConfig["hub"], boolean>] | ["@nuxt/eslint", Exclude<NuxtConfig["eslint"], boolean>] | ["@primevue/nuxt-module", Exclude<NuxtConfig["primevue"], boolean>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/mdc", Exclude<NuxtConfig["mdc"], boolean>] | ["@nuxt/content", Exclude<NuxtConfig["content"], boolean>] | ["@nuxt/scripts", Exclude<NuxtConfig["scripts"], boolean>] | ["@sidebase/nuxt-auth", Exclude<NuxtConfig["auth"], boolean>] | ["@prisma/nuxt", Exclude<NuxtConfig["prisma"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
 }
 declare module 'nuxt/schema' {
+  interface NuxtOptions {
+    /**
+     * Configuration for `@nuxthub/core`
+     * @see https://hub.nuxt.com
+     */
+    ["hub"]: typeof import("@nuxthub/core").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/eslint`
+     * @see https://www.npmjs.com/package/@nuxt/eslint
+     */
+    ["eslint"]: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@primevue/nuxt-module`
+     * @see https://www.npmjs.com/package/@primevue/nuxt-module
+     */
+    ["primevue"]: typeof import("@primevue/nuxt-module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     * @see https://www.npmjs.com/package/@nuxtjs/tailwindcss
+     */
+    ["tailwindcss"]: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/mdc`
+     * @see https://www.npmjs.com/package/@nuxtjs/mdc
+     */
+    ["mdc"]: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/content`
+     * @see https://www.npmjs.com/package/@nuxt/content
+     */
+    ["content"]: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/scripts`
+     * @see https://www.npmjs.com/package/@nuxt/scripts
+     */
+    ["scripts"]: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@sidebase/nuxt-auth`
+     * @see https://www.npmjs.com/package/@sidebase/nuxt-auth
+     */
+    ["auth"]: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@prisma/nuxt`
+     * @see https://www.npmjs.com/package/@prisma/nuxt
+     */
+    ["prisma"]: typeof import("@prisma/nuxt").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/devtools`
+     * @see https://www.npmjs.com/package/@nuxt/devtools
+     */
+    ["devtools"]: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     * @see https://www.npmjs.com/package/@nuxt/telemetry
+     */
+    ["telemetry"]: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? O : Record<string, any>
+  }
   interface NuxtConfig {
-    ["hub"]?: typeof import("@nuxthub/core").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["eslint"]?: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["primevue"]?: typeof import("@primevue/nuxt-module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["mdc"]?: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["scripts"]?: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["auth"]?: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,    ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>,  modules?: (undefined | null | false | NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@nuxthub/core", Exclude<NuxtConfig["hub"], boolean>] | ["@nuxt/eslint", Exclude<NuxtConfig["eslint"], boolean>] | ["@primevue/nuxt-module", Exclude<NuxtConfig["primevue"], boolean>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/mdc", Exclude<NuxtConfig["mdc"], boolean>] | ["@nuxt/content", Exclude<NuxtConfig["content"], boolean>] | ["@nuxt/scripts", Exclude<NuxtConfig["scripts"], boolean>] | ["@sidebase/nuxt-auth", Exclude<NuxtConfig["auth"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    /**
+     * Configuration for `@nuxthub/core`
+     * @see https://hub.nuxt.com
+     */
+    ["hub"]?: typeof import("@nuxthub/core").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/eslint`
+     * @see https://www.npmjs.com/package/@nuxt/eslint
+     */
+    ["eslint"]?: typeof import("@nuxt/eslint").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@primevue/nuxt-module`
+     * @see https://www.npmjs.com/package/@primevue/nuxt-module
+     */
+    ["primevue"]?: typeof import("@primevue/nuxt-module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     * @see https://www.npmjs.com/package/@nuxtjs/tailwindcss
+     */
+    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/mdc`
+     * @see https://www.npmjs.com/package/@nuxtjs/mdc
+     */
+    ["mdc"]?: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/content`
+     * @see https://www.npmjs.com/package/@nuxt/content
+     */
+    ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/scripts`
+     * @see https://www.npmjs.com/package/@nuxt/scripts
+     */
+    ["scripts"]?: typeof import("@nuxt/scripts").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@sidebase/nuxt-auth`
+     * @see https://www.npmjs.com/package/@sidebase/nuxt-auth
+     */
+    ["auth"]?: typeof import("@sidebase/nuxt-auth").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@prisma/nuxt`
+     * @see https://www.npmjs.com/package/@prisma/nuxt
+     */
+    ["prisma"]?: typeof import("@prisma/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/devtools`
+     * @see https://www.npmjs.com/package/@nuxt/devtools
+     */
+    ["devtools"]?: typeof import("@nuxt/devtools").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     * @see https://www.npmjs.com/package/@nuxt/telemetry
+     */
+    ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxthub/core", Exclude<NuxtConfig["hub"], boolean>] | ["@nuxt/eslint", Exclude<NuxtConfig["eslint"], boolean>] | ["@primevue/nuxt-module", Exclude<NuxtConfig["primevue"], boolean>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@nuxtjs/mdc", Exclude<NuxtConfig["mdc"], boolean>] | ["@nuxt/content", Exclude<NuxtConfig["content"], boolean>] | ["@nuxt/scripts", Exclude<NuxtConfig["scripts"], boolean>] | ["@sidebase/nuxt-auth", Exclude<NuxtConfig["auth"], boolean>] | ["@prisma/nuxt", Exclude<NuxtConfig["prisma"], boolean>] | ["@nuxt/devtools", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig {
    app: {
@@ -61,6 +263,8 @@ declare module 'nuxt/schema' {
       analytics: boolean,
 
       blob: boolean,
+
+      browser: boolean,
 
       cache: boolean,
 
@@ -8194,6 +8398,12 @@ declare module 'nuxt/schema' {
 
          addDefaultCallbackUrl: boolean,
       },
+   },
+
+   prisma: {
+      log: Array<any>,
+
+      errorFormat: string,
    },
   }
 }

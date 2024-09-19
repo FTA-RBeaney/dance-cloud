@@ -1,29 +1,31 @@
 <script setup lang="ts">
-import { Send } from "lucide-vue-next";
+import { Send } from 'lucide-vue-next';
 
-const newMessage = ref("");
+const { data } = useAuth();
+
+const newMessage = ref('');
 
 const props = defineProps({
   postId: String,
 });
 
-const { data: messages, refresh } = await useFetch("/api/messages");
+const { data: messages, refresh } = await useFetch('/api/messages');
 
 const comments = computed(() => {
   return messages.value.filter((s) => s.post_id === props.postId);
 });
 
 async function sendMessage() {
-  console.log(`Sending: ${newMessage.value} and ${props.postId}`);
   if (!newMessage.value.trim()) return;
-  await $fetch("/api/messages", {
-    method: "POST",
+  await $fetch('/api/messages', {
+    method: 'POST',
     body: {
       text: newMessage.value,
       post_id: props.postId,
+      user_id: data.value.user.userId,
     },
   });
-  newMessage.value = "";
+  newMessage.value = '';
   await refresh();
 }
 </script>
@@ -53,7 +55,10 @@ async function sendMessage() {
         <CourseComment
           v-for="(message, i) in comments"
           :key="`comment${i}`"
-          :message="message"
+          v-bind="message"
+          :userId="message.user_id"
+          :text="message.text"
+          :date="message.created_at"
         />
       </div>
     </div>

@@ -1,7 +1,5 @@
 <script setup>
-const courses = await queryContent("/courses").find();
-
-console.log("courses", courses);
+const courses = await queryContent('/courses').find();
 </script>
 
 <template>

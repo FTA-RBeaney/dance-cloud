@@ -1,27 +1,44 @@
 <script setup>
+import { PrismaClient } from '@prisma/client';
+
 const props = defineProps({
-  message: Object,
   userId: String,
+  text: String,
+  createdAt: String,
+});
+
+console.log('userId', props.userId);
+// const userId = toRefs(user_id);
+
+const prisma = new PrismaClient();
+const user = await prisma.user.findUnique({
+  where: {
+    id: props.userId,
+  },
+  select: {
+    email: true,
+    name: true,
+    image: true,
+  },
 });
 </script>
 
 <template>
   <article class="p-6 text-base bg-white rounded-lg dark:bg-gray-900">
-    {{ message }}
     <footer class="flex justify-between mb-2">
       <div class="flex items-center space-between">
-        <!-- <p
+        <p
           class="inline-flex mr-3 text-sm text-gray-900 dark:text-white font-semibold"
         >
           <img
             class="mr-2 w-6 h-6 rounded-full"
-            :src="userData.avatar_url"
+            :src="user?.image"
             alt="Michael Gough"
-          />{{ userData.name }}
-        </p> -->
+          />{{ user?.name }}
+        </p>
         <p class="text-sm text-gray-600 dark:text-gray-400">
           <time pubdate datetime="2022-02-08" title="February 8th, 2022">
-            {{ new Date(message.created_at).toLocaleString('fr-FR') }}
+            {{ new Date(createdAt).toLocaleString('fr-FR') }}
           </time>
         </p>
       </div>
@@ -46,7 +63,7 @@ const props = defineProps({
       </button>
     </footer>
     <p class="text-gray-500 dark:text-gray-400">
-      {{ message.text }}
+      {{ text }}
     </p>
     <div class="flex items-center mt-4 space-x-4">
       <button

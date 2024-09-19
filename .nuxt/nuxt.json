@@ -1,9 +1,9 @@
 {
-  "_hash": "oPcyFcLS7l",
+  "_hash": "CEBKPGKJ9W",
   "project": {
     "rootDir": "/Users/robertbeaney/Web Sites/dance-cloud"
   },
   "versions": {
-    "nuxt": "3.13.0"
+    "nuxt": "3.13.2"
   }
 }

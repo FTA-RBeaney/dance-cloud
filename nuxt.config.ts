@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/scripts',
     '@sidebase/nuxt-auth',
+    '@prisma/nuxt',
   ],
   primevue: {
     options: {
@@ -26,11 +27,17 @@ export default defineNuxtConfig({
       },
     },
   },
+  prisma: {
+    autoSetupPrisma: true,
+  },
   hub: {
     database: true,
     kv: true,
     blob: true,
     cache: true,
+  },
+  experimental: {
+    componentIslands: true,
   },
   nitro: {
     experimental: {

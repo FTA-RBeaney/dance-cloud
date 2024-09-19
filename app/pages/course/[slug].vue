@@ -1,22 +1,25 @@
 <script setup>
+import { Eye } from 'lucide-vue-next';
+
 const route = useRoute();
 const data = ref();
 const courseData = ref();
+const visible = ref();
 
-const { data: body } = await useFetch("/api/notion-blocks", {
-  method: "post",
+const { data: body } = await useFetch('/api/notion-blocks', {
+  method: 'post',
   body: { id: route.query.id },
 });
 
-const { data: response } = await useFetch("/api/notion-page-retrieve", {
-  method: "post",
+const { data: response } = await useFetch('/api/notion-page-retrieve', {
+  method: 'post',
   body: { id: route.query.id },
 });
 
 courseData.value = response.value.response;
 
 const childDatabase = body.value.body.results.find(
-  (item) => item.type === "child_database"
+  (item) => item.type === 'child_database'
 );
 
 data.value = childDatabase;
@@ -195,7 +198,7 @@ data.value = childDatabase;
                 </div>
               </div>
             </div>
-            <CourseList :courses="courses" />
+            <!-- <CourseList :courses="courses" /> -->
           </div>
         </div>
       </div>

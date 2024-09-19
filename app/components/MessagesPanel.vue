@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import { Send } from "lucide-vue-next";
-const { data: messages, refresh } = await useFetch("/api/messages");
-const newMessage = ref("");
+import { Send } from 'lucide-vue-next';
+const { data: messages, refresh } = await useFetch('/api/messages');
+const newMessage = ref('');
 
 async function sendMessage() {
-  alert("hi");
+  alert('hi');
   if (!newMessage.value.trim()) return;
-  await $fetch("/api/messages", {
-    method: "POST",
+  await $fetch('/api/messages', {
+    method: 'POST',
     body: {
       text: newMessage.value,
     },
   });
-  newMessage.value = "";
+  newMessage.value = '';
   await refresh();
 }
-
-console.log(messages);
 </script>
 
 <template>
@@ -139,7 +137,7 @@ console.log(messages);
                       </div>
                       <div class="flex text-sm text-gray-300 justify-end">
                         {{
-                          new Date(message.created_at).toLocaleString("fr-FR")
+                          new Date(message.created_at).toLocaleString('fr-FR')
                         }}
                       </div>
                     </div>

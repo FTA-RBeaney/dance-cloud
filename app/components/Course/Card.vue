@@ -22,8 +22,6 @@ const tagColor = computed(() => {
     return;
   }
 });
-
-console.log(tagColor);
 </script>
 <template>
   <div

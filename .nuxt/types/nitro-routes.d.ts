@@ -48,100 +48,100 @@ declare module 'nitropack' {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/stripe/webhook').default>>>>
     }
     '/api/_hub/**:feature': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/[...feature]').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/[...feature]').default>>>>
     }
     '/api/_hub': {
-      'head': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/index.head').default>>>>
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cors.dev').default>>>>
+      'head': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/index.head').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cors.dev').default>>>>
     }
     '/api/_hub/manifest': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/manifest.get').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/base/server/api/_hub/manifest.get').default>>>>
     }
     '/api/_hub/openapi': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/openapi/server/api/_hub/openapi.get').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/openapi/server/api/_hub/openapi.get').default>>>>
     }
     '/api/_hub/blob/**:pathname': {
-      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/[...pathname].delete').default>>>>
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/[...pathname].get').default>>>>
-      'put': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/[...pathname].put').default>>>>
+      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/[...pathname].delete').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/[...pathname].get').default>>>>
+      'put': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/[...pathname].put').default>>>>
     }
     '/api/_hub/blob/delete-folder': {
-      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/delete-folder.post').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/delete-folder.post').default>>>>
     }
     '/api/_hub/blob/delete': {
-      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/delete.post').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/delete.post').default>>>>
     }
     '/api/_hub/blob/head/**:pathname': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/head/[...pathname].get').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/head/[...pathname].get').default>>>>
     }
     '/api/_hub/blob': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/index.get').default>>>>
-      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/index.post').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/index.get').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/index.post').default>>>>
     }
     '/api/_hub/blob/multipart/:action/**:pathname': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/multipart/[action]/[...pathname]').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/blob/server/api/_hub/blob/multipart/[action]/[...pathname]').default>>>>
     }
     '/api/_hub/cache/**:key': {
-      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/[...key].delete').default>>>>
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/[...key].get').default>>>>
-      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/[...key].options').default>>>>
+      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/[...key].delete').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/[...key].get').default>>>>
+      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/[...key].options').default>>>>
     }
     '/api/_hub/cache/batch-delete': {
-      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/batch-delete.options').default>>>>
-      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/batch-delete.post').default>>>>
+      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/batch-delete.options').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/batch-delete.post').default>>>>
     }
     '/api/_hub/cache/clear/**:base': {
-      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/clear/[...base].delete').default>>>>
-      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/clear/[...base].options').default>>>>
+      'delete': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/clear/[...base].delete').default>>>>
+      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/clear/[...base].options').default>>>>
     }
     '/api/_hub/cache': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/index.get').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/cache/server/api/_hub/cache/index.get').default>>>>
     }
     '/api/_hub/database/:command': {
-      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/database/server/api/_hub/database/[command].post').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/database/server/api/_hub/database/[command].post').default>>>>
     }
     '/api/_hub/database/query': {
-      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/database/server/api/_hub/database/query.options').default>>>>
-      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/database/server/api/_hub/database/query.post').default>>>>
+      'options': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/database/server/api/_hub/database/query.options').default>>>>
+      'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/database/server/api/_hub/database/query.post').default>>>>
     }
     '/api/_hub/kv/**:path': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxthub+core@0.7.8_ioredis@5.4.1_magicast@0.3.5_rollup@4.21.2_vite@5.4.2_@types+node@22.5.2__yqnypej27qmmc32io2yptupfam/node_modules/@nuxthub/core/dist/runtime/kv/server/api/_hub/kv/[...path]').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxthub/core/dist/runtime/kv/server/api/_hub/kv/[...path]').default>>>>
     }
     '/images/:pathname': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/routes/images/[pathname].get').default>>>>
     }
     '/__nuxt_error': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nuxt@3.13.0_@parcel+watcher@2.4.1_@types+node@22.5.2_eslint@9.9.1_jiti@1.21.6__ioredis@5.4.1__j3gwvaqemj7aazwpzxyidkmdk4/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>
     }
     '/api/_content/query/:qid/**:params': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
     }
     '/api/_content/query/:qid': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
     }
     '/api/_content/query': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/query').default>>>>
     }
     '/api/_content/cache.json': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>>>
     }
     '/api/_content/navigation/:qid/**:params': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
     }
     '/api/_content/navigation/:qid': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
     }
     '/api/_content/navigation': {
-      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.13.2_ioredis@5.4.1_magicast@0.3.5_nuxt@3.13.0_@parcel+watcher@2.4.1_@types+no_jtf36epbfz34ruu2yluiesnp5u/node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/server/api/navigation').default>>>>
     }
     '/_nitro/openapi.json': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nitropack@2.9.7_magicast@0.3.5/node_modules/nitropack/dist/runtime/routes/openapi').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nitropack/dist/runtime/routes/openapi').default>>>>
     }
     '/_nitro/scalar': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nitropack@2.9.7_magicast@0.3.5/node_modules/nitropack/dist/runtime/routes/scalar').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nitropack/dist/runtime/routes/scalar').default>>>>
     }
     '/_nitro/swagger': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nitropack@2.9.7_magicast@0.3.5/node_modules/nitropack/dist/runtime/routes/swagger').default>>>>
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nitropack/dist/runtime/routes/swagger').default>>>>
     }
   }
 }

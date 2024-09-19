@@ -1,13 +1,11 @@
 <script setup>
-import { ChevronRight, Star, CalendarDays } from "lucide-vue-next";
+import { ChevronRight, Star, CalendarDays } from 'lucide-vue-next';
 const route = useRoute();
 const props = defineProps({
   course: Object,
   image: String,
   title: String,
 });
-
-console.log(route);
 </script>
 
 <template>
@@ -63,7 +61,7 @@ console.log(route);
               </li>
             </ul>
             <h2 class="title">
-              {{ course?.title || title || "Courses" }}
+              {{ course?.title || title || 'Courses' }}
             </h2>
             <!-- <p class="description">
               {{ course?.description || "" }}
